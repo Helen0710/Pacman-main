@@ -1,0 +1,3 @@
+C:/Users/helen/Documents/Pacman-main/build/CMakeFiles/Pacman.dir
+C:/Users/helen/Documents/Pacman-main/build/CMakeFiles/edit_cache.dir
+C:/Users/helen/Documents/Pacman-main/build/CMakeFiles/rebuild_cache.dir

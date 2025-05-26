@@ -1,0 +1,48 @@
+<diagram program="umletino" version="15.1"><zoom_level>9</zoom_level><help_text></help_text><element><id>UMLClass</id><coordinates><x>153</x><y>270</y><w>189</w><h>171</h></coordinates><panel_attributes>Spielobjekt
+--
+- xpos: int 
+- ypos: int 
+- groesse: int 
+- farbe: string 
+- form: Form 
+--
++ Spielobjekt(int xPos, int yPos)
++ getXPos() : int 
++ getYPos() : int 
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>0</x><y>486</y><w>189</w><h>171</h></coordinates><panel_attributes>Figuren
+--
+- farbe: Spielobjekt
+- form :Form
+- objekt : Spielobjekt 
+--
++ Figuren ()</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>324</x><y>495</y><w>189</w><h>171</h></coordinates><panel_attributes>Items 
+--
+-form: Spielobjekt  
+-objekt: Spielobjekt 
+- wert: int  
+--
++ Items ()</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>153</x><y>0</y><w>189</w><h>171</h></coordinates><panel_attributes>Steuerung
+--
+- 
+--
++ Steuerung ()
++ bewegungPacman()
++ Kollession()</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>270</x><y>432</y><w>81</w><h>81</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;10;70;70</additional_attributes></element><element><id>Relation</id><coordinates><x>171</x><y>432</y><w>36</w><h>72</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>20;10;10;60</additional_attributes></element><element><id>UMLClass</id><coordinates><x>315</x><y>738</y><w>189</w><h>171</h></coordinates><panel_attributes>Scoreboard 
+--
+- name: string []
+- platzierung: int 
+--
++ Scoreboard()
++ BerechnungSpielstand()
++ Anzeige() 
++ getScore()
+
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>396</x><y>657</y><w>27</w><h>99</h></coordinates><panel_attributes>lt=&lt;-</panel_attributes><additional_attributes>10;90;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>180</x><y>648</y><w>153</w><h>108</h></coordinates><panel_attributes>lt=&lt;-
+1
+</panel_attributes><additional_attributes>150;100;10;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>594</x><y>639</y><w>189</w><h>171</h></coordinates><panel_attributes>Spielfeld 
+--
+-form: Spielobjekt  
+-objekt: Spielobjekt 
+- wert: int  
+--
++ Items ()</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>234</x><y>162</y><w>27</w><h>126</h></coordinates><panel_attributes>lt=&lt;-</panel_attributes><additional_attributes>10;10;10;120</additional_attributes></element></diagram>
