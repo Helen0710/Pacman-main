@@ -129,54 +129,6 @@ Pacman/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Pacman.dir\build.make CMakeFiles/Pacman.dir/build
 .PHONY : Pacman/fast
 
-Anzeige/scoreBoard.obj: Anzeige/scoreBoard.cpp.obj
-.PHONY : Anzeige/scoreBoard.obj
-
-# target to build an object file
-Anzeige/scoreBoard.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Pacman.dir\build.make CMakeFiles/Pacman.dir/Anzeige/scoreBoard.cpp.obj
-.PHONY : Anzeige/scoreBoard.cpp.obj
-
-Anzeige/scoreBoard.i: Anzeige/scoreBoard.cpp.i
-.PHONY : Anzeige/scoreBoard.i
-
-# target to preprocess a source file
-Anzeige/scoreBoard.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Pacman.dir\build.make CMakeFiles/Pacman.dir/Anzeige/scoreBoard.cpp.i
-.PHONY : Anzeige/scoreBoard.cpp.i
-
-Anzeige/scoreBoard.s: Anzeige/scoreBoard.cpp.s
-.PHONY : Anzeige/scoreBoard.s
-
-# target to generate assembly for a file
-Anzeige/scoreBoard.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Pacman.dir\build.make CMakeFiles/Pacman.dir/Anzeige/scoreBoard.cpp.s
-.PHONY : Anzeige/scoreBoard.cpp.s
-
-Anzeige/start.obj: Anzeige/start.cpp.obj
-.PHONY : Anzeige/start.obj
-
-# target to build an object file
-Anzeige/start.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Pacman.dir\build.make CMakeFiles/Pacman.dir/Anzeige/start.cpp.obj
-.PHONY : Anzeige/start.cpp.obj
-
-Anzeige/start.i: Anzeige/start.cpp.i
-.PHONY : Anzeige/start.i
-
-# target to preprocess a source file
-Anzeige/start.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Pacman.dir\build.make CMakeFiles/Pacman.dir/Anzeige/start.cpp.i
-.PHONY : Anzeige/start.cpp.i
-
-Anzeige/start.s: Anzeige/start.cpp.s
-.PHONY : Anzeige/start.s
-
-# target to generate assembly for a file
-Anzeige/start.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Pacman.dir\build.make CMakeFiles/Pacman.dir/Anzeige/start.cpp.s
-.PHONY : Anzeige/start.cpp.s
-
 Board/board.obj: Board/board.cpp.obj
 .PHONY : Board/board.obj
 
@@ -201,6 +153,30 @@ Board/board.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Pacman.dir\build.make CMakeFiles/Pacman.dir/Board/board.cpp.s
 .PHONY : Board/board.cpp.s
 
+Board/check_position.obj: Board/check_position.cpp.obj
+.PHONY : Board/check_position.obj
+
+# target to build an object file
+Board/check_position.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Pacman.dir\build.make CMakeFiles/Pacman.dir/Board/check_position.cpp.obj
+.PHONY : Board/check_position.cpp.obj
+
+Board/check_position.i: Board/check_position.cpp.i
+.PHONY : Board/check_position.i
+
+# target to preprocess a source file
+Board/check_position.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Pacman.dir\build.make CMakeFiles/Pacman.dir/Board/check_position.cpp.i
+.PHONY : Board/check_position.cpp.i
+
+Board/check_position.s: Board/check_position.cpp.s
+.PHONY : Board/check_position.s
+
+# target to generate assembly for a file
+Board/check_position.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Pacman.dir\build.make CMakeFiles/Pacman.dir/Board/check_position.cpp.s
+.PHONY : Board/check_position.cpp.s
+
 Board/level.obj: Board/level.cpp.obj
 .PHONY : Board/level.obj
 
@@ -224,6 +200,30 @@ Board/level.s: Board/level.cpp.s
 Board/level.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Pacman.dir\build.make CMakeFiles/Pacman.dir/Board/level.cpp.s
 .PHONY : Board/level.cpp.s
+
+Controls/check_collison.obj: Controls/check_collison.cpp.obj
+.PHONY : Controls/check_collison.obj
+
+# target to build an object file
+Controls/check_collison.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Pacman.dir\build.make CMakeFiles/Pacman.dir/Controls/check_collison.cpp.obj
+.PHONY : Controls/check_collison.cpp.obj
+
+Controls/check_collison.i: Controls/check_collison.cpp.i
+.PHONY : Controls/check_collison.i
+
+# target to preprocess a source file
+Controls/check_collison.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Pacman.dir\build.make CMakeFiles/Pacman.dir/Controls/check_collison.cpp.i
+.PHONY : Controls/check_collison.cpp.i
+
+Controls/check_collison.s: Controls/check_collison.cpp.s
+.PHONY : Controls/check_collison.s
+
+# target to generate assembly for a file
+Controls/check_collison.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Pacman.dir\build.make CMakeFiles/Pacman.dir/Controls/check_collison.cpp.s
+.PHONY : Controls/check_collison.cpp.s
 
 Controls/ghost_controller.obj: Controls/ghost_controller.cpp.obj
 .PHONY : Controls/ghost_controller.obj
@@ -273,6 +273,78 @@ Controls/player_controller.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Pacman.dir\build.make CMakeFiles/Pacman.dir/Controls/player_controller.cpp.s
 .PHONY : Controls/player_controller.cpp.s
 
+Display/scoreBoard.obj: Display/scoreBoard.cpp.obj
+.PHONY : Display/scoreBoard.obj
+
+# target to build an object file
+Display/scoreBoard.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Pacman.dir\build.make CMakeFiles/Pacman.dir/Display/scoreBoard.cpp.obj
+.PHONY : Display/scoreBoard.cpp.obj
+
+Display/scoreBoard.i: Display/scoreBoard.cpp.i
+.PHONY : Display/scoreBoard.i
+
+# target to preprocess a source file
+Display/scoreBoard.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Pacman.dir\build.make CMakeFiles/Pacman.dir/Display/scoreBoard.cpp.i
+.PHONY : Display/scoreBoard.cpp.i
+
+Display/scoreBoard.s: Display/scoreBoard.cpp.s
+.PHONY : Display/scoreBoard.s
+
+# target to generate assembly for a file
+Display/scoreBoard.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Pacman.dir\build.make CMakeFiles/Pacman.dir/Display/scoreBoard.cpp.s
+.PHONY : Display/scoreBoard.cpp.s
+
+Display/start_screen.obj: Display/start_screen.cpp.obj
+.PHONY : Display/start_screen.obj
+
+# target to build an object file
+Display/start_screen.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Pacman.dir\build.make CMakeFiles/Pacman.dir/Display/start_screen.cpp.obj
+.PHONY : Display/start_screen.cpp.obj
+
+Display/start_screen.i: Display/start_screen.cpp.i
+.PHONY : Display/start_screen.i
+
+# target to preprocess a source file
+Display/start_screen.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Pacman.dir\build.make CMakeFiles/Pacman.dir/Display/start_screen.cpp.i
+.PHONY : Display/start_screen.cpp.i
+
+Display/start_screen.s: Display/start_screen.cpp.s
+.PHONY : Display/start_screen.s
+
+# target to generate assembly for a file
+Display/start_screen.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Pacman.dir\build.make CMakeFiles/Pacman.dir/Display/start_screen.cpp.s
+.PHONY : Display/start_screen.cpp.s
+
+Display/userManger.obj: Display/userManger.cpp.obj
+.PHONY : Display/userManger.obj
+
+# target to build an object file
+Display/userManger.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Pacman.dir\build.make CMakeFiles/Pacman.dir/Display/userManger.cpp.obj
+.PHONY : Display/userManger.cpp.obj
+
+Display/userManger.i: Display/userManger.cpp.i
+.PHONY : Display/userManger.i
+
+# target to preprocess a source file
+Display/userManger.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Pacman.dir\build.make CMakeFiles/Pacman.dir/Display/userManger.cpp.i
+.PHONY : Display/userManger.cpp.i
+
+Display/userManger.s: Display/userManger.cpp.s
+.PHONY : Display/userManger.s
+
+# target to generate assembly for a file
+Display/userManger.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Pacman.dir\build.make CMakeFiles/Pacman.dir/Display/userManger.cpp.s
+.PHONY : Display/userManger.cpp.s
+
 GameObjects/figures.obj: GameObjects/figures.cpp.obj
 .PHONY : GameObjects/figures.obj
 
@@ -320,6 +392,30 @@ GameObjects/ghost.s: GameObjects/ghost.cpp.s
 GameObjects/ghost.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Pacman.dir\build.make CMakeFiles/Pacman.dir/GameObjects/ghost.cpp.s
 .PHONY : GameObjects/ghost.cpp.s
+
+GameObjects/items.obj: GameObjects/items.cpp.obj
+.PHONY : GameObjects/items.obj
+
+# target to build an object file
+GameObjects/items.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Pacman.dir\build.make CMakeFiles/Pacman.dir/GameObjects/items.cpp.obj
+.PHONY : GameObjects/items.cpp.obj
+
+GameObjects/items.i: GameObjects/items.cpp.i
+.PHONY : GameObjects/items.i
+
+# target to preprocess a source file
+GameObjects/items.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Pacman.dir\build.make CMakeFiles/Pacman.dir/GameObjects/items.cpp.i
+.PHONY : GameObjects/items.cpp.i
+
+GameObjects/items.s: GameObjects/items.cpp.s
+.PHONY : GameObjects/items.s
+
+# target to generate assembly for a file
+GameObjects/items.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Pacman.dir\build.make CMakeFiles/Pacman.dir/GameObjects/items.cpp.s
+.PHONY : GameObjects/items.cpp.s
 
 GameObjects/pacman.obj: GameObjects/pacman.cpp.obj
 .PHONY : GameObjects/pacman.obj
@@ -426,30 +522,42 @@ help:
 	@echo ... edit_cache
 	@echo ... rebuild_cache
 	@echo ... Pacman
-	@echo ... Anzeige/scoreBoard.obj
-	@echo ... Anzeige/scoreBoard.i
-	@echo ... Anzeige/scoreBoard.s
-	@echo ... Anzeige/start.obj
-	@echo ... Anzeige/start.i
-	@echo ... Anzeige/start.s
 	@echo ... Board/board.obj
 	@echo ... Board/board.i
 	@echo ... Board/board.s
+	@echo ... Board/check_position.obj
+	@echo ... Board/check_position.i
+	@echo ... Board/check_position.s
 	@echo ... Board/level.obj
 	@echo ... Board/level.i
 	@echo ... Board/level.s
+	@echo ... Controls/check_collison.obj
+	@echo ... Controls/check_collison.i
+	@echo ... Controls/check_collison.s
 	@echo ... Controls/ghost_controller.obj
 	@echo ... Controls/ghost_controller.i
 	@echo ... Controls/ghost_controller.s
 	@echo ... Controls/player_controller.obj
 	@echo ... Controls/player_controller.i
 	@echo ... Controls/player_controller.s
+	@echo ... Display/scoreBoard.obj
+	@echo ... Display/scoreBoard.i
+	@echo ... Display/scoreBoard.s
+	@echo ... Display/start_screen.obj
+	@echo ... Display/start_screen.i
+	@echo ... Display/start_screen.s
+	@echo ... Display/userManger.obj
+	@echo ... Display/userManger.i
+	@echo ... Display/userManger.s
 	@echo ... GameObjects/figures.obj
 	@echo ... GameObjects/figures.i
 	@echo ... GameObjects/figures.s
 	@echo ... GameObjects/ghost.obj
 	@echo ... GameObjects/ghost.i
 	@echo ... GameObjects/ghost.s
+	@echo ... GameObjects/items.obj
+	@echo ... GameObjects/items.i
+	@echo ... GameObjects/items.s
 	@echo ... GameObjects/pacman.obj
 	@echo ... GameObjects/pacman.i
 	@echo ... GameObjects/pacman.s

@@ -11,13 +11,13 @@ GhostController::GhostController(const PacMan* pac, const Figure* blinky)
 
 
 // Choose the best direction for the ghost to move towards the target
-Direction GhostController::chooseBestDirection(int gx, int gy, const Board& board, Position target){
+Direction GhostController::chooseBestDirection(int gx, int gy, const CheckPosition& checkPos, Position target){
     std::vector<Direction> possibleDirections;
 
-    if(board.isWalkableForGhost(gx, gy -1)) possibleDirections.push_back(Direction::UP);
-    if(board.isWalkableForGhost(gx, gy + 1)) possibleDirections.push_back(Direction::DOWN);
-    if(board.isWalkableForGhost(gx - 1, gy)) possibleDirections.push_back(Direction::LEFT);
-    if(board.isWalkableForGhost(gx + 1, gy)) possibleDirections.push_back(Direction::RIGHT);
+    if(checkPos.isWalkableForGhost(gx, gy -1)) possibleDirections.push_back(Direction::UP);
+    if(checkPos.isWalkableForGhost(gx, gy + 1)) possibleDirections.push_back(Direction::DOWN);
+    if(checkPos.isWalkableForGhost(gx - 1, gy)) possibleDirections.push_back(Direction::LEFT);
+    if(checkPos.isWalkableForGhost(gx + 1, gy)) possibleDirections.push_back(Direction::RIGHT);
 
     //try not to go backwards unless there is no other option
     if(possibleDirections.size() > 1){
@@ -47,31 +47,61 @@ Direction GhostController::chooseBestDirection(int gx, int gy, const Board& boar
     return bestDir;
 }
 
+void GhostController::updateMode( float deltaTime) {
+    modeTimer += deltaTime;
+
+    if (mode == GhostMode::SCATTER && modeTimer > GHOST_SCATTER_TIME) {
+        mode = GhostMode::CHASE;
+        modeTimer = 0.0f;
+    } else if (mode == GhostMode::CHASE && modeTimer > GHOST_CHASE_TIME) {
+        mode = GhostMode::SCATTER;
+        modeTimer = 0.0f;
+    }
+}
+
 
 
 // BlinkyController
+// BlinkyController is the ghost that always chases PacMan
+// Scatter Mode: Top-right corner
 BlinkyController::BlinkyController(const PacMan* pac) : GhostController(pac) {}
 
-Direction BlinkyController::getNextDirection(int gx, int gy, const Board& board) {
+Direction BlinkyController::getNextDirection(int gx, int gy, const CheckPosition& checkPos) {
+    if (getMode() == GhostMode::SCATTER) {
+        Position target = { LEVEL_WIDTH - 1, 0 }; // Top-right
+        return chooseBestDirection(gx, gy, checkPos, target);
+    }
     Position target = { pacman->getX(), pacman->getY() };
-    return chooseBestDirection(gx, gy, board, target);
+    return chooseBestDirection(gx, gy, checkPos, target);
 }
 
 // PinkyController
+// PinkyController is the ghost that tries to predict PacMan's next position
+// Sacatter Mode: Top left corner
 PinkyController::PinkyController(const PacMan* pac) : GhostController(pac) {}
 
-Direction PinkyController::getNextDirection(int gx, int gy, const Board& board) {
+Direction PinkyController::getNextDirection(int gx, int gy, const CheckPosition& checkPos) {
+    if (getMode() == GhostMode::SCATTER) {
+        Position target = { 0, 0 }; // Top-left
+        return chooseBestDirection(gx, gy, checkPos, target);
+    }
     int tx = pacman->getX() + 4 * pacman->getCurrentDir().dx;
     int ty = pacman->getY() + 4 * pacman->getCurrentDir().dy;
     Position target = { tx, ty };
-    return chooseBestDirection(gx, gy, board, target);
+    return chooseBestDirection(gx, gy, checkPos, target);
 
 }
 
 // InkyController
+// InkyController is the ghost that uses Blinky's position to determine its target
+// Scatter Mode: Bottom right corner
 InkyController::InkyController(const PacMan* pac, const Figure* blinky) : GhostController(pac, blinky) {}
 
-Direction InkyController::getNextDirection(int gx, int gy, const Board& board) {
+Direction InkyController::getNextDirection(int gx, int gy, const CheckPosition& checkPos) {
+    if (getMode() == GhostMode::SCATTER) {
+        Position target = { LEVEL_WIDTH - 1, LEVEL_HEIGHT - 1 }; // Bottom-right
+        return chooseBestDirection(gx, gy, checkPos, target);
+    }
     int px = pacman->getX() + 2 * pacman->getCurrentDir().dx;
     int py = pacman->getY() + 2 * pacman->getCurrentDir().dy;
 
@@ -82,22 +112,24 @@ Direction InkyController::getNextDirection(int gx, int gy, const Board& board) {
     int dy = py - by;
 
     Position target = { bx + 2 * dx, by + 2 * dy };
-    return chooseBestDirection(gx, gy, board, target);
+    return chooseBestDirection(gx, gy, checkPos, target);
 }
 
 // ClydeController
+// ClydeController is the ghost that alternates between chase and scatter modes
+// Scatter Mode: Bottom left corner
 ClydeController::ClydeController(const PacMan* pac) : GhostController(pac) {}
 
-Direction ClydeController::getNextDirection(int gx, int gy, const Board& board) {
+Direction ClydeController::getNextDirection(int gx, int gy, const CheckPosition& checkPos) {
     int dx = pacman->getX() - gx;
     int dy = pacman->getY() - gy;
     float distSquared = static_cast<float>(dx * dx + dy * dy);
 
     if (distSquared > 64) { // Chase mode
         Position target = { pacman->getX(), pacman->getY() };
-        return chooseBestDirection(gx, gy, board, target);
+        return chooseBestDirection(gx, gy, checkPos, target);
     } else { // Scatter mode
         Position target = { 0, LEVEL_HEIGHT - 1 }; // Example scatter target
-        return chooseBestDirection(gx, gy, board, target);
+        return chooseBestDirection(gx, gy, checkPos, target);
     }
 }

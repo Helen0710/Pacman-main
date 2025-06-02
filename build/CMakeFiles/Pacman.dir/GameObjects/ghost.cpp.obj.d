@@ -1,6 +1,14 @@
 CMakeFiles/Pacman.dir/GameObjects/ghost.cpp.obj: \
  C:\Users\helen\Documents\Pacman-main\GameObjects\ghost.cpp \
  C:\Users\helen\Documents\Pacman-main\GameObjects\ghost.h \
+ C:/raylib/raylib/src/raylib.h \
+ C:/msys64/ucrt64/lib/gcc/x86_64-w64-mingw32/15.1.0/include/stdarg.h \
+ C:/msys64/ucrt64/include/stdarg.h \
+ C:/msys64/ucrt64/include/_mingw_stdarg.h \
+ C:/msys64/ucrt64/include/vadefs.h C:/msys64/ucrt64/include/_mingw.h \
+ C:/msys64/ucrt64/include/_mingw_mac.h \
+ C:/msys64/ucrt64/include/_mingw_secapi.h \
+ C:/msys64/ucrt64/include/sdks/_mingw_ddk.h \
  C:\Users\helen\Documents\Pacman-main\GameObjects\figures.h \
  C:/Users/helen/Documents/Pacman-main/Board/config.h \
  C:/Users/helen/Documents/Pacman-main/Board/level.h \
@@ -59,19 +67,15 @@ CMakeFiles/Pacman.dir/GameObjects/ghost.cpp.obj: \
  C:/msys64/ucrt64/include/c++/15.1.0/cstddef \
  C:/msys64/ucrt64/lib/gcc/x86_64-w64-mingw32/15.1.0/include/stddef.h \
  C:/msys64/ucrt64/include/stddef.h C:/msys64/ucrt64/include/crtdefs.h \
- C:/msys64/ucrt64/include/corecrt.h C:/msys64/ucrt64/include/_mingw.h \
- C:/msys64/ucrt64/include/_mingw_mac.h \
- C:/msys64/ucrt64/include/_mingw_secapi.h \
- C:/msys64/ucrt64/include/vadefs.h \
- C:/msys64/ucrt64/include/sdks/_mingw_ddk.h \
+ C:/msys64/ucrt64/include/corecrt.h \
  C:/msys64/ucrt64/include/c++/15.1.0/bits/uses_allocator.h \
  C:/msys64/ucrt64/include/c++/15.1.0/bits/uses_allocator_args.h \
- C:/msys64/ucrt64/include/c++/15.1.0/tuple C:/raylib/raylib/src/raylib.h \
- C:/msys64/ucrt64/lib/gcc/x86_64-w64-mingw32/15.1.0/include/stdarg.h \
- C:/msys64/ucrt64/include/stdarg.h \
- C:/msys64/ucrt64/include/_mingw_stdarg.h \
+ C:/msys64/ucrt64/include/c++/15.1.0/tuple \
+ C:/Users/helen/Documents/Pacman-main/Board/check_position.h \
+ C:\Users\helen\Documents\Pacman-main\GameObjects\game_objects.h \
  C:/Users/helen/Documents/Pacman-main/Controls/ghost_controller.h \
  C:/Users/helen/Documents/Pacman-main/GameObjects/pacman.h \
+ C:/Users/helen/Documents/Pacman-main/Controls/player_controller.h \
  C:/msys64/ucrt64/include/c++/15.1.0/cstdlib \
  C:/msys64/ucrt64/include/stdlib.h \
  C:/msys64/ucrt64/include/corecrt_wstdlib.h \

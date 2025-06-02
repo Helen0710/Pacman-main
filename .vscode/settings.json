@@ -53,11 +53,6 @@
         "xstring": "cpp",
         "xtr1common": "cpp",
         "xtree": "cpp",
-        "xutility": "cpp",
-        "C_Cpp.default.compilerPath": "C:/msys64/mingw64/bin/g++.exe"
-    },
-    "C_Cpp.errorSquiggles": "disabled"
-    
-  
-
+        "xutility": "cpp"
+    }
 }

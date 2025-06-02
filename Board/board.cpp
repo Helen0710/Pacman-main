@@ -12,28 +12,14 @@ Board::Board() {
     }
 }
 
-
-
-// Prüft, ob Position begehbar ist
-bool Board::isWalkable(int x, int y) const {
-    char title = grid[y][x];
-    return (title == ' ' || title == '.' || title == 'P' || title == 'B' || title == 'Y' || title == 'I' || title == 'C');
-}
-
-bool Board::isValidPosition(int y, int x) const { 
-    return grid[y][x] != WALL;
-}
-
-bool Board::isWall(int x, int y) const {
-    if(x < 0 || x >= LEVEL_WIDTH || y < 0 || y >= LEVEL_HEIGHT) {
-        return true; // Randbehandlung: außerhalb = keine Wand
+char Board::getCharAt(int y, int x) const {
+    if (y >= 0 && y < LEVEL_HEIGHT && x >= 0 && x < LEVEL_WIDTH) {
+        return grid[y][x];
     }
-    return grid[y][x] == '#';
+    return '#'; // Return '#' for out-of-bounds access, indicating a wall
 }
 
-bool Board::isCoin(int x, int y) const {
-    return grid[y][x] == '.';
-}
+
 
 void Board::getStartPositions(Position& pacmanStart,
                               Position& blinkyStart,
@@ -44,23 +30,23 @@ void Board::getStartPositions(Position& pacmanStart,
         for (int col = 0; col < LEVEL_WIDTH; ++col) {
             char tile = grid[row][col];
             switch (tile) {
-                case 'P':
+                case PACMAN:
                     pacmanStart = {col, row};
                     grid[row][col] = '.'; // Now safe to modify!
                     break;
-                case 'B':
+                case BLINKY:
                     blinkyStart = {col, row};
                     grid[row][col] = '.';
                     break;
-                case 'Y':
+                case PINKY:
                     pinkyStart = {col, row};
                     grid[row][col] = '.';
                     break;
-                case 'I':
+                case INKY:
                     inkyStart = {col, row};
                     grid[row][col] = '.';
                     break;
-                case 'C':
+                case CLYDE:
                     clydeStart = {col, row};
                     grid[row][col] = '.';
                     break;
@@ -79,11 +65,14 @@ void Board::draw() const {
             int py = y * CELL_SIZE;
 
             switch (levelData[y][x]) {
-                case '#':
+                case WALL:
                     DrawRectangle(px, py, CELL_SIZE, CELL_SIZE, DARKBLUE);
                     break;
-                case '.':
+                case COIN:
                     DrawCircle(px + CELL_SIZE / 2, py + CELL_SIZE / 2, CELL_SIZE / 6, YELLOW);
+                    break;
+                case TUNNEL:
+                    DrawRectangle(px, py + CELL_SIZE / 2 - 4, CELL_SIZE, 8, PINK);
                     break;
                 default:
                     break;
@@ -91,17 +80,4 @@ void Board::draw() const {
         }
     }
 }
-
-// For PacMan
-bool Board::isWalkableForPacman(int x, int y) const {
-    return grid[y][x] == ' ' || grid[y][x] == '.'; // PacMan can't walk on TUNNEL
-}
-
-// For Ghosts
-bool Board::isWalkableForGhost(int x, int y) const {
-    return grid[y][x] == ' ' || grid[y][x] == '.' || grid[y][x] == TUNNEL;
-}
-
-
-
 

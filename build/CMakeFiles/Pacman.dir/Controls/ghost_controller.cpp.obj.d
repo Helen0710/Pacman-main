@@ -70,8 +70,11 @@ CMakeFiles/Pacman.dir/Controls/ghost_controller.cpp.obj: \
  C:/msys64/ucrt64/lib/gcc/x86_64-w64-mingw32/15.1.0/include/stdarg.h \
  C:/msys64/ucrt64/include/stdarg.h \
  C:/msys64/ucrt64/include/_mingw_stdarg.h \
+ C:/Users/helen/Documents/Pacman-main/Board/check_position.h \
  C:/Users/helen/Documents/Pacman-main/GameObjects/pacman.h \
+ C:/Users/helen/Documents/Pacman-main/Controls/player_controller.h \
  C:/Users/helen/Documents/Pacman-main/GameObjects/figures.h \
+ C:/Users/helen/Documents/Pacman-main/GameObjects/game_objects.h \
  C:/msys64/ucrt64/include/c++/15.1.0/cstdlib \
  C:/msys64/ucrt64/include/stdlib.h \
  C:/msys64/ucrt64/include/corecrt_wstdlib.h \

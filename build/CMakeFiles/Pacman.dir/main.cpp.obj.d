@@ -69,13 +69,14 @@ CMakeFiles/Pacman.dir/main.cpp.obj: \
  C:/Users/helen/Documents/Pacman-main/utils.h \
  C:\Users\helen\Documents\Pacman-main\Board/config.h \
  C:\Users\helen\Documents\Pacman-main\Board/level.h \
+ C:\Users\helen\Documents\Pacman-main\Board/check_position.h \
  C:\Users\helen\Documents\Pacman-main\GameObjects/pacman.h \
- C:\Users\helen\Documents\Pacman-main\GameObjects/figures.h \
  C:/Users/helen/Documents/Pacman-main/Controls/controller.h \
+ C:/Users/helen/Documents/Pacman-main/Controls/player_controller.h \
+ C:\Users\helen\Documents\Pacman-main\GameObjects/figures.h \
+ C:\Users\helen\Documents\Pacman-main\GameObjects/game_objects.h \
  C:\Users\helen\Documents\Pacman-main\GameObjects/ghost.h \
- C:\Users\helen\Documents\Pacman-main\GameObjects/points.h \
- C:\Users\helen\Documents\Pacman-main\Controls/player_controller.h \
- C:\Users\helen\Documents\Pacman-main\Controls/ghost_controller.h \
+ C:/Users/helen/Documents/Pacman-main/Controls/ghost_controller.h \
  C:/msys64/ucrt64/include/c++/15.1.0/cstdlib \
  C:/msys64/ucrt64/include/stdlib.h \
  C:/msys64/ucrt64/include/corecrt_wstdlib.h \
@@ -94,7 +95,9 @@ CMakeFiles/Pacman.dir/main.cpp.obj: \
  C:/msys64/ucrt64/include/_timeval.h \
  C:/msys64/ucrt64/include/pthread_time.h \
  C:/msys64/ucrt64/include/pthread_compat.h \
- C:\Users\helen\Documents\Pacman-main\Anzeige/start.h \
+ C:\Users\helen\Documents\Pacman-main\GameObjects/points.h \
+ C:\Users\helen\Documents\Pacman-main\Controls/check_collision.h \
+ C:\Users\helen\Documents\Pacman-main\Display/start_screen.h \
  C:/msys64/ucrt64/include/c++/15.1.0/string \
  C:/msys64/ucrt64/include/c++/15.1.0/bits/stringfwd.h \
  C:/msys64/ucrt64/include/c++/15.1.0/bits/char_traits.h \
@@ -124,4 +127,16 @@ CMakeFiles/Pacman.dir/main.cpp.obj: \
  C:/msys64/ucrt64/include/c++/15.1.0/cstdio \
  C:/msys64/ucrt64/include/c++/15.1.0/cerrno \
  C:/msys64/ucrt64/include/c++/15.1.0/bits/charconv.h \
- C:/msys64/ucrt64/include/c++/15.1.0/bits/basic_string.tcc
+ C:/msys64/ucrt64/include/c++/15.1.0/bits/basic_string.tcc \
+ C:\Users\helen\Documents\Pacman-main\Display/scoreboard.h \
+ C:/msys64/ucrt64/include/c++/15.1.0/unordered_map \
+ C:/msys64/ucrt64/include/c++/15.1.0/bits/unordered_map.h \
+ C:/msys64/ucrt64/include/c++/15.1.0/bits/hashtable.h \
+ C:/msys64/ucrt64/include/c++/15.1.0/bits/hashtable_policy.h \
+ C:/msys64/ucrt64/include/c++/15.1.0/ext/aligned_buffer.h \
+ C:/msys64/ucrt64/include/c++/15.1.0/bits/enable_special_members.h \
+ C:/msys64/ucrt64/include/c++/15.1.0/bits/node_handle.h \
+ C:/msys64/ucrt64/include/c++/15.1.0/bits/erase_if.h \
+ C:\Users\helen\Documents\Pacman-main\Display/userManager.h \
+ C:/msys64/ucrt64/include/c++/15.1.0/utility \
+ C:/msys64/ucrt64/include/c++/15.1.0/bits/stl_relops.h

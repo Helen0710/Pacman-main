@@ -1,10 +1,13 @@
 # Pacman
 Implementation of a Pacman Game in C++
 
+#####DONE#####
 1. Die Spielfläche besteht aus einem Raster in dem sich Pac Man und die vier Gespenster bewegen.  
 
+#####DONE#####
 2. Die Spielfläche ist begrenzt.  
 
+####???######
 3. Die Spielfläche kann Rasterpunkte enthalten, die von Pac Man und den Gespenstern nicht betreten werden können. Entsprechende Rasterpunkte sollen als solche erkennbar sein. 
 
 4. Alle Rasterpunkte, die betreten werden können, enthalten eine Münze. Betritt Pac Man einen Rasterpunkt das erste Mal, sammelt er die Münze ein. Die Münze verschwindet und der Spieler bekommt 10 Punkte. 
@@ -15,6 +18,7 @@ Implementation of a Pacman Game in C++
 
 7. Wenn alle Münzen eingesammelt sind ist das Spiel vorbei.  
 
+######DONE######
 8. Pac Man wird durch den Spieler über die Tastatur gesteuert. Die Gespenster bewegen sich selbständig. 
 
 9. Es gibt ein Leaderboard in dem nach jedem Spiel der Spieler mit Punktestand eingetragen wird. Das Leaderboard wird auf der Festplatte gespeichert und beim Start des Spiels sowie nach jedem Spiel angezeigt. 
@@ -50,10 +54,8 @@ GameObjects(Form, Farbe, Position){
 
 Rollenverteilung
 Thea? - Spiellogik & Spielfluss
-- Spielfeld generieren und darstellen ##done
-- zufällige Platzierung von unbetretbaren Feldern ##done 
-- Pac-Man Bewegung und Steuerung über Tastatur
-- Bewegung Geister
+Exception Handling
+
 
 
 

@@ -1,43 +1,73 @@
-
-
 #include "figures.h"
-#include "../Board/config.h"
-#include "../utils.h"
-#include "../Controls/controller.h"
 #include <cmath>
+#include <iostream>
 
-Figure::Figure(int startX, int startY, Controller* ctrl)
+Figure::Figure(int startX, int startY, Controller* ctrl, float spd)
     : gridX(startX),
       gridY(startY),
       px(static_cast<float>(startX) * CELL_SIZE),
       py(static_cast<float>(startY) * CELL_SIZE),
+      speed(spd),
       currentDir(Direction::NONE),
       controller(ctrl) {}
 
-void Figure::update(const Board& board) {
-    int cx = gridX;
-    int cy = gridY;
 
-    // neue Richtung nur, wenn Taste gedrückt wurde
-    Direction nextDir = controller->getNextDirection(cx, cy, board);
+bool Figure::nearCenterOfCell() const {
+    return (static_cast<int>(px) % CELL_SIZE == 0) &&
+           (static_cast<int>(py) % CELL_SIZE == 0);
+}
 
-    if (!nextDir.isNone()) {
-        int nx = cx + nextDir.dx;
-        int ny = cy + nextDir.dy;
+/*
+bool Figure::canMoveTo(const CheckPosition& checkPos, int x, int y) const {
+    return checkPos.isWalkable(x, y);
+}
+*/
 
-        if (canMoveTo(board, nx, ny)) {
-            gridX = nx;
-            gridY = ny;
+void Figure::update(const CheckPosition& checkPos) {
 
-            // Position in Pixeln direkt anpassen
+    if (nearCenterOfCell()) {
+        Direction desiredDir = controller->getNextDirection(gridX, gridY, checkPos);
+        int nx = gridX + desiredDir.dx;
+        int ny = gridY + desiredDir.dy;
+        if (!desiredDir.isNone() && canMoveTo(checkPos, nx, ny)) {
+            currentDir = desiredDir;
+        }
+    }
+    
+    // get the next position based on current direction
+    int nextX = gridX + currentDir.dx;
+    int nextY = gridY + currentDir.dy;
+
+    // --------- Portal Logic ---------
+    // If the next cell is a portal, teleport to the other portal and return
+    if (canMoveTo(checkPos, nextX, nextY) && checkPos.isPortal(nextX, nextY)) {
+        for (int x = 0; x < LEVEL_WIDTH; ++x) {
+            if (x != nextX && checkPos.isPortal(x, nextY)) {
+                gridX = x;
+                gridY = nextY;
+                px = gridX * CELL_SIZE;
+                py = gridY * CELL_SIZE;
+                return;
+            }
+        }
+    }
+
+    // Normal movement
+    if (canMoveTo(checkPos, nextX, nextY)) {
+        px += currentDir.dx * speed;
+        py += currentDir.dy * speed;
+        if (nearCenterOfCell()) {
+            gridX = static_cast<int>(px) / CELL_SIZE;
+            gridY = static_cast<int>(py) / CELL_SIZE;
             px = gridX * CELL_SIZE;
             py = gridY * CELL_SIZE;
         }
-
-        currentDir = nextDir;
+    } else {
+        // Snap to grid if blocked
+        px = gridX * CELL_SIZE;
+        py = gridY * CELL_SIZE;
     }
-}
-
+}   
 
 
 int Figure::getX() const {
@@ -61,4 +91,11 @@ Figure::~Figure() {
 //get current direction
 Direction Figure::getCurrentDir() const {
     return currentDir;
+}
+
+void Figure::setPosition(int x, int y) {
+    gridX = x;
+    gridY = y;
+    px = static_cast<float>(x) * CELL_SIZE;
+    py = static_cast<float>(y) * CELL_SIZE;
 }

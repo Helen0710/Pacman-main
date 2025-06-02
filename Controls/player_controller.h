@@ -1,5 +1,6 @@
 #pragma once
 #include "controller.h"
+#include "../Board/check_position.h"
 
 class PlayerController : public Controller {
     private:
@@ -8,5 +9,5 @@ class PlayerController : public Controller {
 
     public:
         PlayerController();
-        Direction getNextDirection(int gridX, int gridY, const Board& board) override;
+        Direction getNextDirection(int gridX, int gridY, const CheckPosition& checkPos) override;
 };

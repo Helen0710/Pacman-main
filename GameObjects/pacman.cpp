@@ -1,13 +1,18 @@
 #include "pacman.h"
 #include "raylib.h"
-#include "../Board/config.h"
-#include "../Board/board.h"
-#include "../utils.h"
+#include <iostream>
 
-PacMan::PacMan(int startX, int startY, Controller* ctrl) : Figure(startX, startY, ctrl) {}
 
-bool PacMan::canMoveTo(const Board& board, int x, int y) const {
-    return board.isWalkableForPacman(x, y);
+PacMan::PacMan(int startX, int startY, Controller* ctrl, float spd) : Figure(startX, startY, ctrl, spd) {}
+
+bool PacMan::canMoveTo(const CheckPosition& checkPos, int x, int y) const {
+    return checkPos.isWalkableForPacman(x, y);
+}
+
+void PacMan::update(const CheckPosition& checkPos) {
+    
+    Figure::update(checkPos); // Call the base class update method
+
 }
 
 

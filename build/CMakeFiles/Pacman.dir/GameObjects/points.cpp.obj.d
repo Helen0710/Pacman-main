@@ -68,4 +68,5 @@ CMakeFiles/Pacman.dir/GameObjects/points.cpp.obj: \
  C:/raylib/raylib/src/raylib.h \
  C:/msys64/ucrt64/lib/gcc/x86_64-w64-mingw32/15.1.0/include/stdarg.h \
  C:/msys64/ucrt64/include/stdarg.h \
- C:/msys64/ucrt64/include/_mingw_stdarg.h
+ C:/msys64/ucrt64/include/_mingw_stdarg.h \
+ C:/Users/helen/Documents/Pacman-main/Board/check_position.h

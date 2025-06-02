@@ -1,14 +1,18 @@
 #pragma once
 #include <vector>
 #include "../Board/board.h"
+#include "../Board/check_position.h"
 
 class Points {
 private:
     std::vector<std::vector<bool>> points;
 
 public:
-    Points(const Board& board);
+    Points(const CheckPosition& checkPos);
     void draw() const;
-    int checkCollision(int y, int x);
     bool hasRemainingPoints() const;
+
+    //Accessor for points
+    bool getPoint(int y, int x) const;
+    void setPoint(int y, int x, bool value);
 };

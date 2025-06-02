@@ -2,9 +2,6 @@
 
 struct Position {
     int x, y;
-    bool operator==(const Position& other) const {
-        return x == other.x && y == other.y;
-    }
 };
 
 struct Direction {
@@ -29,6 +26,14 @@ struct Direction {
     static const Direction DOWN;
     static const Direction LEFT;
     static const Direction RIGHT;
+
+    int toEnum() const {
+        if (*this == UP) return 0; // UP
+        if (*this == DOWN) return 1;  // DOWN
+        if (*this == LEFT) return 2; // LEFT
+        if (*this == RIGHT) return 3;  // RIGHT
+        return -1; // NONE or invalid
+    }
     
 };
 

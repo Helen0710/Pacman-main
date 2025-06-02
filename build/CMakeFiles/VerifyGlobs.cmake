@@ -4,14 +4,18 @@
 # SOURCES at CMakeLists.txt:14 (file)
 file(GLOB_RECURSE NEW_GLOB LIST_DIRECTORIES false "C:/Users/helen/Documents/Pacman-main/*.cpp")
 set(OLD_GLOB
-  "C:/Users/helen/Documents/Pacman-main/Anzeige/scoreBoard.cpp"
-  "C:/Users/helen/Documents/Pacman-main/Anzeige/start.cpp"
   "C:/Users/helen/Documents/Pacman-main/Board/board.cpp"
+  "C:/Users/helen/Documents/Pacman-main/Board/check_position.cpp"
   "C:/Users/helen/Documents/Pacman-main/Board/level.cpp"
+  "C:/Users/helen/Documents/Pacman-main/Controls/check_collison.cpp"
   "C:/Users/helen/Documents/Pacman-main/Controls/ghost_controller.cpp"
   "C:/Users/helen/Documents/Pacman-main/Controls/player_controller.cpp"
+  "C:/Users/helen/Documents/Pacman-main/Display/scoreBoard.cpp"
+  "C:/Users/helen/Documents/Pacman-main/Display/start_screen.cpp"
+  "C:/Users/helen/Documents/Pacman-main/Display/userManger.cpp"
   "C:/Users/helen/Documents/Pacman-main/GameObjects/figures.cpp"
   "C:/Users/helen/Documents/Pacman-main/GameObjects/ghost.cpp"
+  "C:/Users/helen/Documents/Pacman-main/GameObjects/items.cpp"
   "C:/Users/helen/Documents/Pacman-main/GameObjects/pacman.cpp"
   "C:/Users/helen/Documents/Pacman-main/GameObjects/points.cpp"
   "C:/Users/helen/Documents/Pacman-main/build/CMakeFiles/4.0.2/CompilerIdCXX/CMakeCXXCompilerId.cpp"
