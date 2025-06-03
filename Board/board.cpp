@@ -62,7 +62,7 @@ void Board::draw() const {
     for (int y = 0; y < LEVEL_HEIGHT; ++y) {
         for (int x = 0; x < LEVEL_WIDTH; ++x) {
             int px = x * CELL_SIZE;
-            int py = y * CELL_SIZE;
+            int py = y * CELL_SIZE + TOP_MARGIN; // Add top margin for scoreboard
 
             switch (levelData[y][x]) {
                 case WALL:
@@ -80,4 +80,3 @@ void Board::draw() const {
         }
     }
 }
-

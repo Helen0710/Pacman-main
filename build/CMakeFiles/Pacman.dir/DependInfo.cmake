@@ -20,6 +20,7 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "C:/Users/helen/Documents/Pacman-main/GameObjects/figures.cpp" "CMakeFiles/Pacman.dir/GameObjects/figures.cpp.obj" "gcc" "CMakeFiles/Pacman.dir/GameObjects/figures.cpp.obj.d"
   "C:/Users/helen/Documents/Pacman-main/GameObjects/ghost.cpp" "CMakeFiles/Pacman.dir/GameObjects/ghost.cpp.obj" "gcc" "CMakeFiles/Pacman.dir/GameObjects/ghost.cpp.obj.d"
   "C:/Users/helen/Documents/Pacman-main/GameObjects/items.cpp" "CMakeFiles/Pacman.dir/GameObjects/items.cpp.obj" "gcc" "CMakeFiles/Pacman.dir/GameObjects/items.cpp.obj.d"
+  "C:/Users/helen/Documents/Pacman-main/GameObjects/lives.cpp" "CMakeFiles/Pacman.dir/GameObjects/lives.cpp.obj" "gcc" "CMakeFiles/Pacman.dir/GameObjects/lives.cpp.obj.d"
   "C:/Users/helen/Documents/Pacman-main/GameObjects/pacman.cpp" "CMakeFiles/Pacman.dir/GameObjects/pacman.cpp.obj" "gcc" "CMakeFiles/Pacman.dir/GameObjects/pacman.cpp.obj.d"
   "C:/Users/helen/Documents/Pacman-main/GameObjects/points.cpp" "CMakeFiles/Pacman.dir/GameObjects/points.cpp.obj" "gcc" "CMakeFiles/Pacman.dir/GameObjects/points.cpp.obj.d"
   "C:/Users/helen/Documents/Pacman-main/main.cpp" "CMakeFiles/Pacman.dir/main.cpp.obj" "gcc" "CMakeFiles/Pacman.dir/main.cpp.obj.d"

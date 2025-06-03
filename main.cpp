@@ -18,13 +18,15 @@ int main() {
     Board board;
     CheckPosition checkPos(board);
     Points point(checkPos);
-    int score = 0;
+   int score;
 
     StartScreen startScreen(SCREEN_WIDTH, SCREEN_HEIGHT);
     Scoreboard scoreboard(SCREEN_WIDTH, SCREEN_HEIGHT);
-    scoreboard.LoadScores("scores.txt");
 
     UserManager userManager;
+    Lives lives;
+    lives.reset();
+
 
     // Get start positions
     Position pacmanStart, blinkyStart, pinkyStart, inkyStart, clydeStart;
@@ -62,6 +64,7 @@ int main() {
             case GameState::StartScreen:
                 startScreen.update();
                 startScreen.draw();
+                pacman-> resetState(); 
 
                 if (startScreen.isOptionSelected()) {
                     int choice = startScreen.getSelection();
@@ -76,17 +79,17 @@ int main() {
                 }
                 break;
             case GameState::UserInput:
+                score = 0;
                 userManager.inputName();
                 userManager.drawNameInput();
 
-                if (userManager.isNameEntered()) {
+                if (userManager.isNameEntered() && !userManager.getCurrentUser().empty()) {
                     scoreboard.AddUser(userManager.getCurrentUser());
                     state = GameState::Playing;
                 }
                 break;
             case GameState::Playing: {
                 float deltaTime = GetFrameTime();
-
                 // Update ghost modes
                 for (auto* fig : figures) {
                     Ghost* ghost = dynamic_cast<Ghost*>(fig);
@@ -95,11 +98,41 @@ int main() {
                     }
                 }
 
+                lives.update(deltaTime);
+                  // --- PacMan Death Animation Handling ---
+                if (pacman->getState() == PacManState::Dying) {
+                    pacman->update(checkPos); // advances deathTimer
+                    board.draw();
+                    for (auto* fig : figures) fig->draw();
+                    point.draw();
+                    lives.draw();
+                    DrawText(TextFormat("Score: %d", score), 20, 20, 30, YELLOW);
+                    // Wait until animation is done
+                    if (pacman->getState() == PacManState::Dead) {
+                        lives.loseLife();
+                        if (lives.isGameOver()) {
+                            TraceLog(LOG_ERROR, "PacMan has no lives left! Game Over.");
+                            state = GameState::GameOver;
+                        } else {
+                            // Reset positions after losing a life
+                            pacman->setPosition(pacmanStartInitial.x, pacmanStartInitial.y);
+                            blinky->setPosition(blinkyStartInitial.x, blinkyStartInitial.y);
+                            pinky->setPosition(pinkyStartInitial.x, pinkyStartInitial.y);
+                            inky->setPosition(inkyStartInitial.x, inkyStartInitial.y);
+                            clyde->setPosition(clydeStartInitial.x, clydeStartInitial.y);
+                            pacman->resetState(); // set PacMan back to Alive
+                        }
+                    }
+                    break; // skip the rest of the Playing logic while dying/dead
+                }
+
+                // --- Normal update and collision logic ---
+
                 // Update figures and handle collisions
                 for (auto* fig : figures) {
                     fig->update(checkPos);
 
-                    if (fig == pacman) {
+                    if (fig == pacman && pacman->getState() == PacManState::Alive) {
                         if (CheckCollision::isPacmanCollidingWithPoint(*pacman, point)) {
                             score += 10;
                             TraceLog(LOG_INFO, "Punkte: %d", score);
@@ -109,8 +142,10 @@ int main() {
                         for (auto* other : figures) {
                             if (other != pacman &&
                                 CheckCollision::isPacmanCollidingWithGhost(*pacman, *other)) {
-                                TraceLog(LOG_ERROR, "PacMan collided with a ghost! Game Over.");
-                                state = GameState::GameOver;
+                                  if (!lives.isImmune()) {
+                                    pacman->startDeathAnimation(); // Start dying animation
+                                    // Do NOT lose life or reset here!
+                                }
                             }
                         }
                     }
@@ -119,7 +154,8 @@ int main() {
                 board.draw();
                 for (auto* fig : figures) fig->draw();
                 point.draw();
-                userManager.saveScore(score, "scores.txt");
+                lives.draw();
+                
 
                 break;
             }
@@ -140,6 +176,7 @@ int main() {
 
             if (IsKeyPressed(KEY_ENTER)) {
                 state = GameState::StartScreen;
+                
             }
             break;
         }
@@ -148,10 +185,16 @@ int main() {
         case GameState::GameOver:
                 DrawText("GAME OVER", SCREEN_WIDTH / 2 - 100, SCREEN_HEIGHT / 2 - 20, 40, RED);
                 DrawText("Drücke ENTER zum Zurückkehren", SCREEN_WIDTH / 2 - 180, SCREEN_HEIGHT / 2 + 40, 20, WHITE);
+                
                 if (IsKeyPressed(KEY_ENTER)) {
                     state = GameState::StartScreen;
-                    score = 0;
+                    userManager.saveScore(score, "scores.txt");  
+                    userManager.reset();
+                    lives.reset(); // Reset lives for the next game
+                    point.resetPoints(checkPos);
                 }
+
+                // Reset positions 
                 pacman->setPosition(pacmanStartInitial.x, pacmanStartInitial.y);
                 blinky->setPosition(blinkyStartInitial.x, blinkyStartInitial.y);
                 pinky->setPosition(pinkyStartInitial.x, pinkyStartInitial.y);

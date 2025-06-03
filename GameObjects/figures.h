@@ -39,4 +39,5 @@ class Figure: public GameObject {
 
         Direction getCurrentDir() const; // Get the current direction of the figure
         bool nearCenterOfCell() const; // Check if the figure is at the center of a cell
-        void setPosition(int x, int y) ;
+        void setPosition(int x, int y); // Set the position of the figure in the grid
+};

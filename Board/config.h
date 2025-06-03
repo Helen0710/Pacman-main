@@ -2,15 +2,20 @@
 
 #include "level.h"
 
-const int CELL_SIZE = 40; // Size of each cell in pixels
+const int CELL_SIZE = 32; // Size of each cell in pixels
+constexpr int TOP_MARGIN = 50; // Margin at the top of the screen for the scoreboard
+constexpr int BOTTOM_MARGIN = 50; // Margin at the bottom of the screen for the scoreboard
 const int SCREEN_WIDTH = LEVEL_WIDTH * CELL_SIZE; // Width of the window in pixels
-const int SCREEN_HEIGHT = LEVEL_HEIGHT* CELL_SIZE; // Height of the window in pixels
+const int SCREEN_HEIGHT = LEVEL_HEIGHT* CELL_SIZE + TOP_MARGIN + BOTTOM_MARGIN; // Height of the window in pixels
+
 
 const float GHOST_SPEED = 2.0f; // Speed of the ghosts in seconds per move must be a divisor of cell_size
 const float PACMAN_SPEED = 4.0f; // Speed of PacMan in seconds per move must be a divisor of cell_size
 
-const float GHOST_SCATTER_TIME = 8.0; // Time in seconds for scatter mode
-const float GHOST_CHASE_TIME = 20.0f; // Time in seconds for chase mode
+const float GHOST_SCATTER_TIME = 5.0f; // Time in seconds for scatter mode
+const float GHOST_CHASE_TIME = 15.0f; // Time in seconds for chase mode
+
+const float MAX_LIVES = 3; // Maximum number of lives for PacMan
 
 
 #define GHOST_PINK Color{ 255, 192, 203, 255 } // Pink color for Pinky 
@@ -29,5 +34,4 @@ constexpr char PINKY = 'Y'; // Pinky character
 constexpr char INKY = 'I'; // Inky character
 constexpr char CLYDE = 'C'; // Clyde character
 constexpr char COIN = '.'; // Coin character
-
 

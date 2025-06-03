@@ -417,6 +417,30 @@ GameObjects/items.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Pacman.dir\build.make CMakeFiles/Pacman.dir/GameObjects/items.cpp.s
 .PHONY : GameObjects/items.cpp.s
 
+GameObjects/lives.obj: GameObjects/lives.cpp.obj
+.PHONY : GameObjects/lives.obj
+
+# target to build an object file
+GameObjects/lives.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Pacman.dir\build.make CMakeFiles/Pacman.dir/GameObjects/lives.cpp.obj
+.PHONY : GameObjects/lives.cpp.obj
+
+GameObjects/lives.i: GameObjects/lives.cpp.i
+.PHONY : GameObjects/lives.i
+
+# target to preprocess a source file
+GameObjects/lives.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Pacman.dir\build.make CMakeFiles/Pacman.dir/GameObjects/lives.cpp.i
+.PHONY : GameObjects/lives.cpp.i
+
+GameObjects/lives.s: GameObjects/lives.cpp.s
+.PHONY : GameObjects/lives.s
+
+# target to generate assembly for a file
+GameObjects/lives.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Pacman.dir\build.make CMakeFiles/Pacman.dir/GameObjects/lives.cpp.s
+.PHONY : GameObjects/lives.cpp.s
+
 GameObjects/pacman.obj: GameObjects/pacman.cpp.obj
 .PHONY : GameObjects/pacman.obj
 
@@ -558,6 +582,9 @@ help:
 	@echo ... GameObjects/items.obj
 	@echo ... GameObjects/items.i
 	@echo ... GameObjects/items.s
+	@echo ... GameObjects/lives.obj
+	@echo ... GameObjects/lives.i
+	@echo ... GameObjects/lives.s
 	@echo ... GameObjects/pacman.obj
 	@echo ... GameObjects/pacman.i
 	@echo ... GameObjects/pacman.s

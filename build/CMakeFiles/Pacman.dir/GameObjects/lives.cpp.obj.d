@@ -1,6 +1,6 @@
-CMakeFiles/Pacman.dir/GameObjects/items.cpp.obj: \
- C:\Users\helen\Documents\Pacman-main\GameObjects\items.cpp \
- C:\Users\helen\Documents\Pacman-main\GameObjects\items.h \
+CMakeFiles/Pacman.dir/GameObjects/lives.cpp.obj: \
+ C:\Users\helen\Documents\Pacman-main\GameObjects\lives.cpp \
+ C:\Users\helen\Documents\Pacman-main\GameObjects\lives.h \
  C:\Users\helen\Documents\Pacman-main\GameObjects\game_objects.h \
  C:/Users/helen/Documents/Pacman-main/Board/config.h \
  C:/Users/helen/Documents/Pacman-main/Board/level.h \
@@ -71,4 +71,7 @@ CMakeFiles/Pacman.dir/GameObjects/items.cpp.obj: \
  C:/msys64/ucrt64/lib/gcc/x86_64-w64-mingw32/15.1.0/include/stdarg.h \
  C:/msys64/ucrt64/include/stdarg.h \
  C:/msys64/ucrt64/include/_mingw_stdarg.h \
- C:/Users/helen/Documents/Pacman-main/Controls/controller.h
+ C:/Users/helen/Documents/Pacman-main/Controls/check_collision.h \
+ C:/Users/helen/Documents/Pacman-main/GameObjects/figures.h \
+ C:/Users/helen/Documents/Pacman-main/Controls/controller.h \
+ C:/Users/helen/Documents/Pacman-main/GameObjects/points.h

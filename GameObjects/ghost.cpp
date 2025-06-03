@@ -19,7 +19,7 @@ void Ghost::update(const CheckPosition& checkPos) {
 
 void Ghost::draw() const {
     int centerX = static_cast<int>(px + CELL_SIZE / 2);
-    int centerY = static_cast<int>(py + CELL_SIZE / 2);
+    int centerY = static_cast<int>(py + CELL_SIZE / 2) + TOP_MARGIN; // Add top margin for scoreboard
     int radius = CELL_SIZE / 2 - 2;
 
     // Draw ghost body rounded top + flat bottom

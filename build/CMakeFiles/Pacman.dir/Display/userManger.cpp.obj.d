@@ -170,4 +170,11 @@ CMakeFiles/Pacman.dir/Display/userManger.cpp.obj: \
  C:/msys64/ucrt64/include/c++/15.1.0/pstl/execution_defs.h \
  C:/msys64/ucrt64/include/c++/15.1.0/cstring \
  C:/msys64/ucrt64/include/string.h \
- C:/msys64/ucrt64/include/sec_api/string_s.h
+ C:/msys64/ucrt64/include/sec_api/string_s.h \
+ C:/msys64/ucrt64/include/c++/15.1.0/map \
+ C:/msys64/ucrt64/include/c++/15.1.0/bits/stl_tree.h \
+ C:/msys64/ucrt64/include/c++/15.1.0/ext/aligned_buffer.h \
+ C:/msys64/ucrt64/include/c++/15.1.0/bits/node_handle.h \
+ C:/msys64/ucrt64/include/c++/15.1.0/bits/stl_map.h \
+ C:/msys64/ucrt64/include/c++/15.1.0/bits/stl_multimap.h \
+ C:/msys64/ucrt64/include/c++/15.1.0/bits/erase_if.h

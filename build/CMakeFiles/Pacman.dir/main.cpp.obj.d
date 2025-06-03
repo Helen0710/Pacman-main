@@ -96,7 +96,8 @@ CMakeFiles/Pacman.dir/main.cpp.obj: \
  C:/msys64/ucrt64/include/pthread_time.h \
  C:/msys64/ucrt64/include/pthread_compat.h \
  C:\Users\helen\Documents\Pacman-main\GameObjects/points.h \
- C:\Users\helen\Documents\Pacman-main\Controls/check_collision.h \
+ C:\Users\helen\Documents\Pacman-main\GameObjects/lives.h \
+ C:/Users/helen/Documents/Pacman-main/Controls/check_collision.h \
  C:\Users\helen\Documents\Pacman-main\Display/start_screen.h \
  C:/msys64/ucrt64/include/c++/15.1.0/string \
  C:/msys64/ucrt64/include/c++/15.1.0/bits/stringfwd.h \
@@ -139,4 +140,21 @@ CMakeFiles/Pacman.dir/main.cpp.obj: \
  C:/msys64/ucrt64/include/c++/15.1.0/bits/erase_if.h \
  C:\Users\helen\Documents\Pacman-main\Display/userManager.h \
  C:/msys64/ucrt64/include/c++/15.1.0/utility \
- C:/msys64/ucrt64/include/c++/15.1.0/bits/stl_relops.h
+ C:/msys64/ucrt64/include/c++/15.1.0/bits/stl_relops.h \
+ C:/msys64/ucrt64/include/c++/15.1.0/math.h \
+ C:/msys64/ucrt64/include/c++/15.1.0/cmath \
+ C:/msys64/ucrt64/include/math.h \
+ C:/msys64/ucrt64/include/c++/15.1.0/bits/specfun.h \
+ C:/msys64/ucrt64/include/c++/15.1.0/limits \
+ C:/msys64/ucrt64/include/c++/15.1.0/tr1/gamma.tcc \
+ C:/msys64/ucrt64/include/c++/15.1.0/tr1/special_function_util.h \
+ C:/msys64/ucrt64/include/c++/15.1.0/tr1/bessel_function.tcc \
+ C:/msys64/ucrt64/include/c++/15.1.0/tr1/beta_function.tcc \
+ C:/msys64/ucrt64/include/c++/15.1.0/tr1/ell_integral.tcc \
+ C:/msys64/ucrt64/include/c++/15.1.0/tr1/exp_integral.tcc \
+ C:/msys64/ucrt64/include/c++/15.1.0/tr1/hypergeometric.tcc \
+ C:/msys64/ucrt64/include/c++/15.1.0/tr1/legendre_function.tcc \
+ C:/msys64/ucrt64/include/c++/15.1.0/tr1/modified_bessel_func.tcc \
+ C:/msys64/ucrt64/include/c++/15.1.0/tr1/poly_hermite.tcc \
+ C:/msys64/ucrt64/include/c++/15.1.0/tr1/poly_laguerre.tcc \
+ C:/msys64/ucrt64/include/c++/15.1.0/tr1/riemann_zeta.tcc

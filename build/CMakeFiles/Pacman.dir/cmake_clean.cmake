@@ -23,6 +23,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/Pacman.dir/GameObjects/ghost.cpp.obj.d"
   "CMakeFiles/Pacman.dir/GameObjects/items.cpp.obj"
   "CMakeFiles/Pacman.dir/GameObjects/items.cpp.obj.d"
+  "CMakeFiles/Pacman.dir/GameObjects/lives.cpp.obj"
+  "CMakeFiles/Pacman.dir/GameObjects/lives.cpp.obj.d"
   "CMakeFiles/Pacman.dir/GameObjects/pacman.cpp.obj"
   "CMakeFiles/Pacman.dir/GameObjects/pacman.cpp.obj.d"
   "CMakeFiles/Pacman.dir/GameObjects/points.cpp.obj"

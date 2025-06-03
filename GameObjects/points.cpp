@@ -21,7 +21,7 @@ void Points::draw() const {
     for (int y = 0; y < LEVEL_HEIGHT; ++y) {
         for (int x = 0; x < LEVEL_WIDTH; ++x) {
             if (points[y][x]) {  // Klein geschrieben, Zugriff auf Member
-                DrawCircle(x * CELL_SIZE + CELL_SIZE / 2, y * CELL_SIZE + CELL_SIZE / 2, 3, YELLOW);
+                DrawCircle(x * CELL_SIZE + CELL_SIZE / 2, y * CELL_SIZE + CELL_SIZE / 2 + TOP_MARGIN, 3, YELLOW);
             }
         }
     }
@@ -44,4 +44,15 @@ bool Points::getPoint(int y, int x) const {
 
 void Points::setPoint(int y, int x, bool value) {
     points[y][x] = value; // Setze den Punkt auf false, wenn PacMan ihn einsammelt
+}
+void Points::resetPoints(const CheckPosition& checkPos) {
+    for (int y = 0; y < LEVEL_HEIGHT; ++y) {
+        for (int x = 0; x < LEVEL_WIDTH; ++x) {
+            if (checkPos.isWalkableForPacman(x, y)) {
+                points[y][x] = true; // Setze alle Punkte zurück
+            } else {
+                points[y][x] = false; // Nicht begehbare Felder haben keine Punkte
+            }
+        }
+    }
 }

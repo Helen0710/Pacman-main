@@ -947,6 +947,7 @@ CMakeFiles/Pacman.dir/Display/userManger.cpp.obj: C:/Users/helen/Documents/Pacma
   C:/msys64/ucrt64/include/c++/15.1.0/bits/cpp_type_traits.h \
   C:/msys64/ucrt64/include/c++/15.1.0/bits/cxxabi_forced.h \
   C:/msys64/ucrt64/include/c++/15.1.0/bits/cxxabi_init_exception.h \
+  C:/msys64/ucrt64/include/c++/15.1.0/bits/erase_if.h \
   C:/msys64/ucrt64/include/c++/15.1.0/bits/exception.h \
   C:/msys64/ucrt64/include/c++/15.1.0/bits/exception_defines.h \
   C:/msys64/ucrt64/include/c++/15.1.0/bits/exception_ptr.h \
@@ -967,6 +968,7 @@ CMakeFiles/Pacman.dir/Display/userManger.cpp.obj: C:/Users/helen/Documents/Pacma
   C:/msys64/ucrt64/include/c++/15.1.0/bits/move.h \
   C:/msys64/ucrt64/include/c++/15.1.0/bits/nested_exception.h \
   C:/msys64/ucrt64/include/c++/15.1.0/bits/new_allocator.h \
+  C:/msys64/ucrt64/include/c++/15.1.0/bits/node_handle.h \
   C:/msys64/ucrt64/include/c++/15.1.0/bits/ostream.h \
   C:/msys64/ucrt64/include/c++/15.1.0/bits/ostream.tcc \
   C:/msys64/ucrt64/include/c++/15.1.0/bits/ostream_insert.h \
@@ -987,9 +989,12 @@ CMakeFiles/Pacman.dir/Display/userManger.cpp.obj: C:/Users/helen/Documents/Pacma
   C:/msys64/ucrt64/include/c++/15.1.0/bits/stl_iterator.h \
   C:/msys64/ucrt64/include/c++/15.1.0/bits/stl_iterator_base_funcs.h \
   C:/msys64/ucrt64/include/c++/15.1.0/bits/stl_iterator_base_types.h \
+  C:/msys64/ucrt64/include/c++/15.1.0/bits/stl_map.h \
+  C:/msys64/ucrt64/include/c++/15.1.0/bits/stl_multimap.h \
   C:/msys64/ucrt64/include/c++/15.1.0/bits/stl_pair.h \
   C:/msys64/ucrt64/include/c++/15.1.0/bits/stl_relops.h \
   C:/msys64/ucrt64/include/c++/15.1.0/bits/stl_tempbuf.h \
+  C:/msys64/ucrt64/include/c++/15.1.0/bits/stl_tree.h \
   C:/msys64/ucrt64/include/c++/15.1.0/bits/stl_uninitialized.h \
   C:/msys64/ucrt64/include/c++/15.1.0/bits/stl_vector.h \
   C:/msys64/ucrt64/include/c++/15.1.0/bits/streambuf.tcc \
@@ -1015,6 +1020,7 @@ CMakeFiles/Pacman.dir/Display/userManger.cpp.obj: C:/Users/helen/Documents/Pacma
   C:/msys64/ucrt64/include/c++/15.1.0/debug/assertions.h \
   C:/msys64/ucrt64/include/c++/15.1.0/debug/debug.h \
   C:/msys64/ucrt64/include/c++/15.1.0/exception \
+  C:/msys64/ucrt64/include/c++/15.1.0/ext/aligned_buffer.h \
   C:/msys64/ucrt64/include/c++/15.1.0/ext/alloc_traits.h \
   C:/msys64/ucrt64/include/c++/15.1.0/ext/atomicity.h \
   C:/msys64/ucrt64/include/c++/15.1.0/ext/numeric_traits.h \
@@ -1025,6 +1031,7 @@ CMakeFiles/Pacman.dir/Display/userManger.cpp.obj: C:/Users/helen/Documents/Pacma
   C:/msys64/ucrt64/include/c++/15.1.0/ios \
   C:/msys64/ucrt64/include/c++/15.1.0/iosfwd \
   C:/msys64/ucrt64/include/c++/15.1.0/istream \
+  C:/msys64/ucrt64/include/c++/15.1.0/map \
   C:/msys64/ucrt64/include/c++/15.1.0/new \
   C:/msys64/ucrt64/include/c++/15.1.0/ostream \
   C:/msys64/ucrt64/include/c++/15.1.0/pstl/execution_defs.h \
@@ -1381,7 +1388,160 @@ CMakeFiles/Pacman.dir/GameObjects/ghost.cpp.obj: C:/Users/helen/Documents/Pacman
   C:/Users/helen/Documents/Pacman-main/GameObjects/game_objects.h \
   C:/Users/helen/Documents/Pacman-main/GameObjects/ghost.h
 
-CMakeFiles/Pacman.dir/GameObjects/items.cpp.obj: C:/Users/helen/Documents/Pacman-main/GameObjects/items.cpp
+CMakeFiles/Pacman.dir/GameObjects/items.cpp.obj: C:/Users/helen/Documents/Pacman-main/GameObjects/items.cpp \
+  C:/Users/helen/Documents/Pacman-main/Board/board.h \
+  C:/Users/helen/Documents/Pacman-main/Board/check_position.h \
+  C:/Users/helen/Documents/Pacman-main/Board/config.h \
+  C:/Users/helen/Documents/Pacman-main/Board/level.h \
+  C:/Users/helen/Documents/Pacman-main/Controls/controller.h \
+  C:/Users/helen/Documents/Pacman-main/utils.h \
+  C:/msys64/ucrt64/include/_mingw.h \
+  C:/msys64/ucrt64/include/_mingw_mac.h \
+  C:/msys64/ucrt64/include/_mingw_secapi.h \
+  C:/msys64/ucrt64/include/_mingw_stdarg.h \
+  C:/msys64/ucrt64/include/c++/15.1.0/backward/binders.h \
+  C:/msys64/ucrt64/include/c++/15.1.0/bit \
+  C:/msys64/ucrt64/include/c++/15.1.0/bits/alloc_traits.h \
+  C:/msys64/ucrt64/include/c++/15.1.0/bits/allocator.h \
+  C:/msys64/ucrt64/include/c++/15.1.0/bits/concept_check.h \
+  C:/msys64/ucrt64/include/c++/15.1.0/bits/cpp_type_traits.h \
+  C:/msys64/ucrt64/include/c++/15.1.0/bits/exception.h \
+  C:/msys64/ucrt64/include/c++/15.1.0/bits/exception_defines.h \
+  C:/msys64/ucrt64/include/c++/15.1.0/bits/functexcept.h \
+  C:/msys64/ucrt64/include/c++/15.1.0/bits/functional_hash.h \
+  C:/msys64/ucrt64/include/c++/15.1.0/bits/hash_bytes.h \
+  C:/msys64/ucrt64/include/c++/15.1.0/bits/invoke.h \
+  C:/msys64/ucrt64/include/c++/15.1.0/bits/memory_resource.h \
+  C:/msys64/ucrt64/include/c++/15.1.0/bits/memoryfwd.h \
+  C:/msys64/ucrt64/include/c++/15.1.0/bits/move.h \
+  C:/msys64/ucrt64/include/c++/15.1.0/bits/new_allocator.h \
+  C:/msys64/ucrt64/include/c++/15.1.0/bits/predefined_ops.h \
+  C:/msys64/ucrt64/include/c++/15.1.0/bits/ptr_traits.h \
+  C:/msys64/ucrt64/include/c++/15.1.0/bits/range_access.h \
+  C:/msys64/ucrt64/include/c++/15.1.0/bits/refwrap.h \
+  C:/msys64/ucrt64/include/c++/15.1.0/bits/requires_hosted.h \
+  C:/msys64/ucrt64/include/c++/15.1.0/bits/stl_algobase.h \
+  C:/msys64/ucrt64/include/c++/15.1.0/bits/stl_bvector.h \
+  C:/msys64/ucrt64/include/c++/15.1.0/bits/stl_construct.h \
+  C:/msys64/ucrt64/include/c++/15.1.0/bits/stl_function.h \
+  C:/msys64/ucrt64/include/c++/15.1.0/bits/stl_iterator.h \
+  C:/msys64/ucrt64/include/c++/15.1.0/bits/stl_iterator_base_funcs.h \
+  C:/msys64/ucrt64/include/c++/15.1.0/bits/stl_iterator_base_types.h \
+  C:/msys64/ucrt64/include/c++/15.1.0/bits/stl_pair.h \
+  C:/msys64/ucrt64/include/c++/15.1.0/bits/stl_uninitialized.h \
+  C:/msys64/ucrt64/include/c++/15.1.0/bits/stl_vector.h \
+  C:/msys64/ucrt64/include/c++/15.1.0/bits/uses_allocator.h \
+  C:/msys64/ucrt64/include/c++/15.1.0/bits/uses_allocator_args.h \
+  C:/msys64/ucrt64/include/c++/15.1.0/bits/utility.h \
+  C:/msys64/ucrt64/include/c++/15.1.0/bits/vector.tcc \
+  C:/msys64/ucrt64/include/c++/15.1.0/bits/version.h \
+  C:/msys64/ucrt64/include/c++/15.1.0/concepts \
+  C:/msys64/ucrt64/include/c++/15.1.0/cstddef \
+  C:/msys64/ucrt64/include/c++/15.1.0/debug/assertions.h \
+  C:/msys64/ucrt64/include/c++/15.1.0/debug/debug.h \
+  C:/msys64/ucrt64/include/c++/15.1.0/ext/alloc_traits.h \
+  C:/msys64/ucrt64/include/c++/15.1.0/ext/numeric_traits.h \
+  C:/msys64/ucrt64/include/c++/15.1.0/ext/type_traits.h \
+  C:/msys64/ucrt64/include/c++/15.1.0/initializer_list \
+  C:/msys64/ucrt64/include/c++/15.1.0/new \
+  C:/msys64/ucrt64/include/c++/15.1.0/pstl/pstl_config.h \
+  C:/msys64/ucrt64/include/c++/15.1.0/tuple \
+  C:/msys64/ucrt64/include/c++/15.1.0/type_traits \
+  C:/msys64/ucrt64/include/c++/15.1.0/vector \
+  C:/msys64/ucrt64/include/c++/15.1.0/x86_64-w64-mingw32/bits/c++allocator.h \
+  C:/msys64/ucrt64/include/c++/15.1.0/x86_64-w64-mingw32/bits/c++config.h \
+  C:/msys64/ucrt64/include/c++/15.1.0/x86_64-w64-mingw32/bits/cpu_defines.h \
+  C:/msys64/ucrt64/include/c++/15.1.0/x86_64-w64-mingw32/bits/os_defines.h \
+  C:/msys64/ucrt64/include/corecrt.h \
+  C:/msys64/ucrt64/include/crtdefs.h \
+  C:/msys64/ucrt64/include/sdks/_mingw_ddk.h \
+  C:/msys64/ucrt64/include/stdarg.h \
+  C:/msys64/ucrt64/include/stddef.h \
+  C:/msys64/ucrt64/include/vadefs.h \
+  C:/msys64/ucrt64/lib/gcc/x86_64-w64-mingw32/15.1.0/include/stdarg.h \
+  C:/msys64/ucrt64/lib/gcc/x86_64-w64-mingw32/15.1.0/include/stddef.h \
+  C:/raylib/raylib/src/raylib.h \
+  C:/Users/helen/Documents/Pacman-main/GameObjects/game_objects.h \
+  C:/Users/helen/Documents/Pacman-main/GameObjects/items.h
+
+CMakeFiles/Pacman.dir/GameObjects/lives.cpp.obj: C:/Users/helen/Documents/Pacman-main/GameObjects/lives.cpp \
+  C:/Users/helen/Documents/Pacman-main/Board/board.h \
+  C:/Users/helen/Documents/Pacman-main/Board/check_position.h \
+  C:/Users/helen/Documents/Pacman-main/Board/config.h \
+  C:/Users/helen/Documents/Pacman-main/Board/level.h \
+  C:/Users/helen/Documents/Pacman-main/Controls/check_collision.h \
+  C:/Users/helen/Documents/Pacman-main/Controls/controller.h \
+  C:/Users/helen/Documents/Pacman-main/GameObjects/figures.h \
+  C:/Users/helen/Documents/Pacman-main/GameObjects/points.h \
+  C:/Users/helen/Documents/Pacman-main/utils.h \
+  C:/msys64/ucrt64/include/_mingw.h \
+  C:/msys64/ucrt64/include/_mingw_mac.h \
+  C:/msys64/ucrt64/include/_mingw_secapi.h \
+  C:/msys64/ucrt64/include/_mingw_stdarg.h \
+  C:/msys64/ucrt64/include/c++/15.1.0/backward/binders.h \
+  C:/msys64/ucrt64/include/c++/15.1.0/bit \
+  C:/msys64/ucrt64/include/c++/15.1.0/bits/alloc_traits.h \
+  C:/msys64/ucrt64/include/c++/15.1.0/bits/allocator.h \
+  C:/msys64/ucrt64/include/c++/15.1.0/bits/concept_check.h \
+  C:/msys64/ucrt64/include/c++/15.1.0/bits/cpp_type_traits.h \
+  C:/msys64/ucrt64/include/c++/15.1.0/bits/exception.h \
+  C:/msys64/ucrt64/include/c++/15.1.0/bits/exception_defines.h \
+  C:/msys64/ucrt64/include/c++/15.1.0/bits/functexcept.h \
+  C:/msys64/ucrt64/include/c++/15.1.0/bits/functional_hash.h \
+  C:/msys64/ucrt64/include/c++/15.1.0/bits/hash_bytes.h \
+  C:/msys64/ucrt64/include/c++/15.1.0/bits/invoke.h \
+  C:/msys64/ucrt64/include/c++/15.1.0/bits/memory_resource.h \
+  C:/msys64/ucrt64/include/c++/15.1.0/bits/memoryfwd.h \
+  C:/msys64/ucrt64/include/c++/15.1.0/bits/move.h \
+  C:/msys64/ucrt64/include/c++/15.1.0/bits/new_allocator.h \
+  C:/msys64/ucrt64/include/c++/15.1.0/bits/predefined_ops.h \
+  C:/msys64/ucrt64/include/c++/15.1.0/bits/ptr_traits.h \
+  C:/msys64/ucrt64/include/c++/15.1.0/bits/range_access.h \
+  C:/msys64/ucrt64/include/c++/15.1.0/bits/refwrap.h \
+  C:/msys64/ucrt64/include/c++/15.1.0/bits/requires_hosted.h \
+  C:/msys64/ucrt64/include/c++/15.1.0/bits/stl_algobase.h \
+  C:/msys64/ucrt64/include/c++/15.1.0/bits/stl_bvector.h \
+  C:/msys64/ucrt64/include/c++/15.1.0/bits/stl_construct.h \
+  C:/msys64/ucrt64/include/c++/15.1.0/bits/stl_function.h \
+  C:/msys64/ucrt64/include/c++/15.1.0/bits/stl_iterator.h \
+  C:/msys64/ucrt64/include/c++/15.1.0/bits/stl_iterator_base_funcs.h \
+  C:/msys64/ucrt64/include/c++/15.1.0/bits/stl_iterator_base_types.h \
+  C:/msys64/ucrt64/include/c++/15.1.0/bits/stl_pair.h \
+  C:/msys64/ucrt64/include/c++/15.1.0/bits/stl_uninitialized.h \
+  C:/msys64/ucrt64/include/c++/15.1.0/bits/stl_vector.h \
+  C:/msys64/ucrt64/include/c++/15.1.0/bits/uses_allocator.h \
+  C:/msys64/ucrt64/include/c++/15.1.0/bits/uses_allocator_args.h \
+  C:/msys64/ucrt64/include/c++/15.1.0/bits/utility.h \
+  C:/msys64/ucrt64/include/c++/15.1.0/bits/vector.tcc \
+  C:/msys64/ucrt64/include/c++/15.1.0/bits/version.h \
+  C:/msys64/ucrt64/include/c++/15.1.0/concepts \
+  C:/msys64/ucrt64/include/c++/15.1.0/cstddef \
+  C:/msys64/ucrt64/include/c++/15.1.0/debug/assertions.h \
+  C:/msys64/ucrt64/include/c++/15.1.0/debug/debug.h \
+  C:/msys64/ucrt64/include/c++/15.1.0/ext/alloc_traits.h \
+  C:/msys64/ucrt64/include/c++/15.1.0/ext/numeric_traits.h \
+  C:/msys64/ucrt64/include/c++/15.1.0/ext/type_traits.h \
+  C:/msys64/ucrt64/include/c++/15.1.0/initializer_list \
+  C:/msys64/ucrt64/include/c++/15.1.0/new \
+  C:/msys64/ucrt64/include/c++/15.1.0/pstl/pstl_config.h \
+  C:/msys64/ucrt64/include/c++/15.1.0/tuple \
+  C:/msys64/ucrt64/include/c++/15.1.0/type_traits \
+  C:/msys64/ucrt64/include/c++/15.1.0/vector \
+  C:/msys64/ucrt64/include/c++/15.1.0/x86_64-w64-mingw32/bits/c++allocator.h \
+  C:/msys64/ucrt64/include/c++/15.1.0/x86_64-w64-mingw32/bits/c++config.h \
+  C:/msys64/ucrt64/include/c++/15.1.0/x86_64-w64-mingw32/bits/cpu_defines.h \
+  C:/msys64/ucrt64/include/c++/15.1.0/x86_64-w64-mingw32/bits/os_defines.h \
+  C:/msys64/ucrt64/include/corecrt.h \
+  C:/msys64/ucrt64/include/crtdefs.h \
+  C:/msys64/ucrt64/include/sdks/_mingw_ddk.h \
+  C:/msys64/ucrt64/include/stdarg.h \
+  C:/msys64/ucrt64/include/stddef.h \
+  C:/msys64/ucrt64/include/vadefs.h \
+  C:/msys64/ucrt64/lib/gcc/x86_64-w64-mingw32/15.1.0/include/stdarg.h \
+  C:/msys64/ucrt64/lib/gcc/x86_64-w64-mingw32/15.1.0/include/stddef.h \
+  C:/raylib/raylib/src/raylib.h \
+  C:/Users/helen/Documents/Pacman-main/GameObjects/game_objects.h \
+  C:/Users/helen/Documents/Pacman-main/GameObjects/lives.h
 
 CMakeFiles/Pacman.dir/GameObjects/pacman.cpp.obj: C:/Users/helen/Documents/Pacman-main/GameObjects/pacman.cpp \
   C:/Users/helen/Documents/Pacman-main/Board/board.h \
@@ -1440,6 +1600,7 @@ CMakeFiles/Pacman.dir/GameObjects/pacman.cpp.obj: C:/Users/helen/Documents/Pacma
   C:/msys64/ucrt64/include/c++/15.1.0/bits/range_access.h \
   C:/msys64/ucrt64/include/c++/15.1.0/bits/refwrap.h \
   C:/msys64/ucrt64/include/c++/15.1.0/bits/requires_hosted.h \
+  C:/msys64/ucrt64/include/c++/15.1.0/bits/specfun.h \
   C:/msys64/ucrt64/include/c++/15.1.0/bits/std_abs.h \
   C:/msys64/ucrt64/include/c++/15.1.0/bits/stl_algobase.h \
   C:/msys64/ucrt64/include/c++/15.1.0/bits/stl_bvector.h \
@@ -1463,6 +1624,7 @@ CMakeFiles/Pacman.dir/GameObjects/pacman.cpp.obj: C:/Users/helen/Documents/Pacma
   C:/msys64/ucrt64/include/c++/15.1.0/cctype \
   C:/msys64/ucrt64/include/c++/15.1.0/cerrno \
   C:/msys64/ucrt64/include/c++/15.1.0/clocale \
+  C:/msys64/ucrt64/include/c++/15.1.0/cmath \
   C:/msys64/ucrt64/include/c++/15.1.0/concepts \
   C:/msys64/ucrt64/include/c++/15.1.0/cstddef \
   C:/msys64/ucrt64/include/c++/15.1.0/cstdio \
@@ -1482,6 +1644,7 @@ CMakeFiles/Pacman.dir/GameObjects/pacman.cpp.obj: C:/Users/helen/Documents/Pacma
   C:/msys64/ucrt64/include/c++/15.1.0/iosfwd \
   C:/msys64/ucrt64/include/c++/15.1.0/iostream \
   C:/msys64/ucrt64/include/c++/15.1.0/istream \
+  C:/msys64/ucrt64/include/c++/15.1.0/limits \
   C:/msys64/ucrt64/include/c++/15.1.0/new \
   C:/msys64/ucrt64/include/c++/15.1.0/ostream \
   C:/msys64/ucrt64/include/c++/15.1.0/pstl/pstl_config.h \
@@ -1491,6 +1654,18 @@ CMakeFiles/Pacman.dir/GameObjects/pacman.cpp.obj: C:/Users/helen/Documents/Pacma
   C:/msys64/ucrt64/include/c++/15.1.0/string \
   C:/msys64/ucrt64/include/c++/15.1.0/string_view \
   C:/msys64/ucrt64/include/c++/15.1.0/system_error \
+  C:/msys64/ucrt64/include/c++/15.1.0/tr1/bessel_function.tcc \
+  C:/msys64/ucrt64/include/c++/15.1.0/tr1/beta_function.tcc \
+  C:/msys64/ucrt64/include/c++/15.1.0/tr1/ell_integral.tcc \
+  C:/msys64/ucrt64/include/c++/15.1.0/tr1/exp_integral.tcc \
+  C:/msys64/ucrt64/include/c++/15.1.0/tr1/gamma.tcc \
+  C:/msys64/ucrt64/include/c++/15.1.0/tr1/hypergeometric.tcc \
+  C:/msys64/ucrt64/include/c++/15.1.0/tr1/legendre_function.tcc \
+  C:/msys64/ucrt64/include/c++/15.1.0/tr1/modified_bessel_func.tcc \
+  C:/msys64/ucrt64/include/c++/15.1.0/tr1/poly_hermite.tcc \
+  C:/msys64/ucrt64/include/c++/15.1.0/tr1/poly_laguerre.tcc \
+  C:/msys64/ucrt64/include/c++/15.1.0/tr1/riemann_zeta.tcc \
+  C:/msys64/ucrt64/include/c++/15.1.0/tr1/special_function_util.h \
   C:/msys64/ucrt64/include/c++/15.1.0/tuple \
   C:/msys64/ucrt64/include/c++/15.1.0/type_traits \
   C:/msys64/ucrt64/include/c++/15.1.0/typeinfo \
@@ -1517,6 +1692,7 @@ CMakeFiles/Pacman.dir/GameObjects/pacman.cpp.obj: C:/Users/helen/Documents/Pacma
   C:/msys64/ucrt64/include/limits.h \
   C:/msys64/ucrt64/include/locale.h \
   C:/msys64/ucrt64/include/malloc.h \
+  C:/msys64/ucrt64/include/math.h \
   C:/msys64/ucrt64/include/process.h \
   C:/msys64/ucrt64/include/pthread.h \
   C:/msys64/ucrt64/include/pthread_compat.h \
@@ -1626,6 +1802,7 @@ CMakeFiles/Pacman.dir/GameObjects/points.cpp.obj: C:/Users/helen/Documents/Pacma
   C:/Users/helen/Documents/Pacman-main/GameObjects/points.h
 
 CMakeFiles/Pacman.dir/main.cpp.obj: C:/Users/helen/Documents/Pacman-main/main.cpp \
+  C:/Users/helen/Documents/Pacman-main/Controls/check_collision.h \
   C:/Users/helen/Documents/Pacman-main/Controls/controller.h \
   C:/Users/helen/Documents/Pacman-main/Controls/ghost_controller.h \
   C:/Users/helen/Documents/Pacman-main/Controls/player_controller.h \
@@ -1671,6 +1848,7 @@ CMakeFiles/Pacman.dir/main.cpp.obj: C:/Users/helen/Documents/Pacman-main/main.cp
   C:/msys64/ucrt64/include/c++/15.1.0/bits/range_access.h \
   C:/msys64/ucrt64/include/c++/15.1.0/bits/refwrap.h \
   C:/msys64/ucrt64/include/c++/15.1.0/bits/requires_hosted.h \
+  C:/msys64/ucrt64/include/c++/15.1.0/bits/specfun.h \
   C:/msys64/ucrt64/include/c++/15.1.0/bits/std_abs.h \
   C:/msys64/ucrt64/include/c++/15.1.0/bits/stl_algobase.h \
   C:/msys64/ucrt64/include/c++/15.1.0/bits/stl_bvector.h \
@@ -1694,6 +1872,7 @@ CMakeFiles/Pacman.dir/main.cpp.obj: C:/Users/helen/Documents/Pacman-main/main.cp
   C:/msys64/ucrt64/include/c++/15.1.0/cctype \
   C:/msys64/ucrt64/include/c++/15.1.0/cerrno \
   C:/msys64/ucrt64/include/c++/15.1.0/clocale \
+  C:/msys64/ucrt64/include/c++/15.1.0/cmath \
   C:/msys64/ucrt64/include/c++/15.1.0/concepts \
   C:/msys64/ucrt64/include/c++/15.1.0/cstddef \
   C:/msys64/ucrt64/include/c++/15.1.0/cstdio \
@@ -1709,11 +1888,25 @@ CMakeFiles/Pacman.dir/main.cpp.obj: C:/Users/helen/Documents/Pacman-main/main.cp
   C:/msys64/ucrt64/include/c++/15.1.0/ext/type_traits.h \
   C:/msys64/ucrt64/include/c++/15.1.0/initializer_list \
   C:/msys64/ucrt64/include/c++/15.1.0/iosfwd \
+  C:/msys64/ucrt64/include/c++/15.1.0/limits \
+  C:/msys64/ucrt64/include/c++/15.1.0/math.h \
   C:/msys64/ucrt64/include/c++/15.1.0/new \
   C:/msys64/ucrt64/include/c++/15.1.0/pstl/pstl_config.h \
   C:/msys64/ucrt64/include/c++/15.1.0/stdlib.h \
   C:/msys64/ucrt64/include/c++/15.1.0/string \
   C:/msys64/ucrt64/include/c++/15.1.0/string_view \
+  C:/msys64/ucrt64/include/c++/15.1.0/tr1/bessel_function.tcc \
+  C:/msys64/ucrt64/include/c++/15.1.0/tr1/beta_function.tcc \
+  C:/msys64/ucrt64/include/c++/15.1.0/tr1/ell_integral.tcc \
+  C:/msys64/ucrt64/include/c++/15.1.0/tr1/exp_integral.tcc \
+  C:/msys64/ucrt64/include/c++/15.1.0/tr1/gamma.tcc \
+  C:/msys64/ucrt64/include/c++/15.1.0/tr1/hypergeometric.tcc \
+  C:/msys64/ucrt64/include/c++/15.1.0/tr1/legendre_function.tcc \
+  C:/msys64/ucrt64/include/c++/15.1.0/tr1/modified_bessel_func.tcc \
+  C:/msys64/ucrt64/include/c++/15.1.0/tr1/poly_hermite.tcc \
+  C:/msys64/ucrt64/include/c++/15.1.0/tr1/poly_laguerre.tcc \
+  C:/msys64/ucrt64/include/c++/15.1.0/tr1/riemann_zeta.tcc \
+  C:/msys64/ucrt64/include/c++/15.1.0/tr1/special_function_util.h \
   C:/msys64/ucrt64/include/c++/15.1.0/tuple \
   C:/msys64/ucrt64/include/c++/15.1.0/type_traits \
   C:/msys64/ucrt64/include/c++/15.1.0/unordered_map \
@@ -1734,6 +1927,7 @@ CMakeFiles/Pacman.dir/main.cpp.obj: C:/Users/helen/Documents/Pacman-main/main.cp
   C:/msys64/ucrt64/include/limits.h \
   C:/msys64/ucrt64/include/locale.h \
   C:/msys64/ucrt64/include/malloc.h \
+  C:/msys64/ucrt64/include/math.h \
   C:/msys64/ucrt64/include/pthread_compat.h \
   C:/msys64/ucrt64/include/pthread_time.h \
   C:/msys64/ucrt64/include/sdks/_mingw_ddk.h \
@@ -1760,13 +1954,13 @@ CMakeFiles/Pacman.dir/main.cpp.obj: C:/Users/helen/Documents/Pacman-main/main.cp
   C:/Users/helen/Documents/Pacman-main/Board/check_position.h \
   C:/Users/helen/Documents/Pacman-main/Board/config.h \
   C:/Users/helen/Documents/Pacman-main/Board/level.h \
-  C:/Users/helen/Documents/Pacman-main/Controls/check_collision.h \
   C:/Users/helen/Documents/Pacman-main/Display/scoreboard.h \
   C:/Users/helen/Documents/Pacman-main/Display/start_screen.h \
   C:/Users/helen/Documents/Pacman-main/Display/userManager.h \
   C:/Users/helen/Documents/Pacman-main/GameObjects/figures.h \
   C:/Users/helen/Documents/Pacman-main/GameObjects/game_objects.h \
   C:/Users/helen/Documents/Pacman-main/GameObjects/ghost.h \
+  C:/Users/helen/Documents/Pacman-main/GameObjects/lives.h \
   C:/Users/helen/Documents/Pacman-main/GameObjects/pacman.h \
   C:/Users/helen/Documents/Pacman-main/GameObjects/points.h \
   C:/Users/helen/Documents/Pacman-main/master_header.h
@@ -2133,6 +2327,8 @@ C:/msys64/ucrt64/include/time.h:
 
 C:/msys64/ucrt64/include/wchar.h:
 
+C:/msys64/ucrt64/include/c++/15.1.0/map:
+
 C:/msys64/ucrt64/include/wctype.h:
 
 C:/msys64/ucrt64/lib/gcc/x86_64-w64-mingw32/15.1.0/include/limits.h:
@@ -2211,6 +2407,8 @@ C:/msys64/ucrt64/include/c++/15.1.0/bits/node_handle.h:
 
 C:/msys64/ucrt64/include/c++/15.1.0/bits/sstream.tcc:
 
+C:/msys64/ucrt64/include/c++/15.1.0/math.h:
+
 C:/msys64/ucrt64/include/c++/15.1.0/cstring:
 
 C:/msys64/ucrt64/include/c++/15.1.0/fstream:
@@ -2227,19 +2425,31 @@ C:/msys64/ucrt64/include/string.h:
 
 C:/Users/helen/Documents/Pacman-main/Display/start_screen.h:
 
+C:/msys64/ucrt64/include/c++/15.1.0/bits/stl_map.h:
+
+C:/Users/helen/Documents/Pacman-main/GameObjects/figures.cpp:
+
+C:/msys64/ucrt64/include/c++/15.1.0/bits/stl_multimap.h:
+
 C:/msys64/ucrt64/include/c++/15.1.0/bits/stl_relops.h:
+
+C:/msys64/ucrt64/include/c++/15.1.0/bits/stl_tree.h:
 
 C:/msys64/ucrt64/include/c++/15.1.0/utility:
 
 C:/Users/helen/Documents/Pacman-main/Display/UserManager.h:
-
-C:/Users/helen/Documents/Pacman-main/GameObjects/figures.cpp:
 
 C:/Users/helen/Documents/Pacman-main/GameObjects/ghost.cpp:
 
 C:/Users/helen/Documents/Pacman-main/GameObjects/ghost.h:
 
 C:/Users/helen/Documents/Pacman-main/GameObjects/items.cpp:
+
+C:/Users/helen/Documents/Pacman-main/GameObjects/items.h:
+
+C:/Users/helen/Documents/Pacman-main/GameObjects/lives.cpp:
+
+C:/Users/helen/Documents/Pacman-main/GameObjects/lives.h:
 
 C:/Users/helen/Documents/Pacman-main/GameObjects/pacman.cpp:
 

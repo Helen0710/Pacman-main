@@ -16,6 +16,7 @@ set(OLD_GLOB
   "C:/Users/helen/Documents/Pacman-main/GameObjects/figures.cpp"
   "C:/Users/helen/Documents/Pacman-main/GameObjects/ghost.cpp"
   "C:/Users/helen/Documents/Pacman-main/GameObjects/items.cpp"
+  "C:/Users/helen/Documents/Pacman-main/GameObjects/lives.cpp"
   "C:/Users/helen/Documents/Pacman-main/GameObjects/pacman.cpp"
   "C:/Users/helen/Documents/Pacman-main/GameObjects/points.cpp"
   "C:/Users/helen/Documents/Pacman-main/build/CMakeFiles/4.0.2/CompilerIdCXX/CMakeCXXCompilerId.cpp"

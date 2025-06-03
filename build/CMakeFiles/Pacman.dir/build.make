@@ -251,11 +251,26 @@ CMakeFiles/Pacman.dir/GameObjects/items.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/Pacman.dir/GameObjects/items.cpp.s"
 	C:\msys64\ucrt64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\helen\Documents\Pacman-main\GameObjects\items.cpp -o CMakeFiles\Pacman.dir\GameObjects\items.cpp.s
 
+CMakeFiles/Pacman.dir/GameObjects/lives.cpp.obj: CMakeFiles/Pacman.dir/flags.make
+CMakeFiles/Pacman.dir/GameObjects/lives.cpp.obj: CMakeFiles/Pacman.dir/includes_CXX.rsp
+CMakeFiles/Pacman.dir/GameObjects/lives.cpp.obj: C:/Users/helen/Documents/Pacman-main/GameObjects/lives.cpp
+CMakeFiles/Pacman.dir/GameObjects/lives.cpp.obj: CMakeFiles/Pacman.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\helen\Documents\Pacman-main\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/Pacman.dir/GameObjects/lives.cpp.obj"
+	C:\msys64\ucrt64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Pacman.dir/GameObjects/lives.cpp.obj -MF CMakeFiles\Pacman.dir\GameObjects\lives.cpp.obj.d -o CMakeFiles\Pacman.dir\GameObjects\lives.cpp.obj -c C:\Users\helen\Documents\Pacman-main\GameObjects\lives.cpp
+
+CMakeFiles/Pacman.dir/GameObjects/lives.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/Pacman.dir/GameObjects/lives.cpp.i"
+	C:\msys64\ucrt64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\helen\Documents\Pacman-main\GameObjects\lives.cpp > CMakeFiles\Pacman.dir\GameObjects\lives.cpp.i
+
+CMakeFiles/Pacman.dir/GameObjects/lives.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/Pacman.dir/GameObjects/lives.cpp.s"
+	C:\msys64\ucrt64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\helen\Documents\Pacman-main\GameObjects\lives.cpp -o CMakeFiles\Pacman.dir\GameObjects\lives.cpp.s
+
 CMakeFiles/Pacman.dir/GameObjects/pacman.cpp.obj: CMakeFiles/Pacman.dir/flags.make
 CMakeFiles/Pacman.dir/GameObjects/pacman.cpp.obj: CMakeFiles/Pacman.dir/includes_CXX.rsp
 CMakeFiles/Pacman.dir/GameObjects/pacman.cpp.obj: C:/Users/helen/Documents/Pacman-main/GameObjects/pacman.cpp
 CMakeFiles/Pacman.dir/GameObjects/pacman.cpp.obj: CMakeFiles/Pacman.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\helen\Documents\Pacman-main\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/Pacman.dir/GameObjects/pacman.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\helen\Documents\Pacman-main\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object CMakeFiles/Pacman.dir/GameObjects/pacman.cpp.obj"
 	C:\msys64\ucrt64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Pacman.dir/GameObjects/pacman.cpp.obj -MF CMakeFiles\Pacman.dir\GameObjects\pacman.cpp.obj.d -o CMakeFiles\Pacman.dir\GameObjects\pacman.cpp.obj -c C:\Users\helen\Documents\Pacman-main\GameObjects\pacman.cpp
 
 CMakeFiles/Pacman.dir/GameObjects/pacman.cpp.i: cmake_force
@@ -270,7 +285,7 @@ CMakeFiles/Pacman.dir/GameObjects/points.cpp.obj: CMakeFiles/Pacman.dir/flags.ma
 CMakeFiles/Pacman.dir/GameObjects/points.cpp.obj: CMakeFiles/Pacman.dir/includes_CXX.rsp
 CMakeFiles/Pacman.dir/GameObjects/points.cpp.obj: C:/Users/helen/Documents/Pacman-main/GameObjects/points.cpp
 CMakeFiles/Pacman.dir/GameObjects/points.cpp.obj: CMakeFiles/Pacman.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\helen\Documents\Pacman-main\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object CMakeFiles/Pacman.dir/GameObjects/points.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\helen\Documents\Pacman-main\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object CMakeFiles/Pacman.dir/GameObjects/points.cpp.obj"
 	C:\msys64\ucrt64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Pacman.dir/GameObjects/points.cpp.obj -MF CMakeFiles\Pacman.dir\GameObjects\points.cpp.obj.d -o CMakeFiles\Pacman.dir\GameObjects\points.cpp.obj -c C:\Users\helen\Documents\Pacman-main\GameObjects\points.cpp
 
 CMakeFiles/Pacman.dir/GameObjects/points.cpp.i: cmake_force
@@ -285,7 +300,7 @@ CMakeFiles/Pacman.dir/main.cpp.obj: CMakeFiles/Pacman.dir/flags.make
 CMakeFiles/Pacman.dir/main.cpp.obj: CMakeFiles/Pacman.dir/includes_CXX.rsp
 CMakeFiles/Pacman.dir/main.cpp.obj: C:/Users/helen/Documents/Pacman-main/main.cpp
 CMakeFiles/Pacman.dir/main.cpp.obj: CMakeFiles/Pacman.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\helen\Documents\Pacman-main\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object CMakeFiles/Pacman.dir/main.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\helen\Documents\Pacman-main\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building CXX object CMakeFiles/Pacman.dir/main.cpp.obj"
 	C:\msys64\ucrt64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Pacman.dir/main.cpp.obj -MF CMakeFiles\Pacman.dir\main.cpp.obj.d -o CMakeFiles\Pacman.dir\main.cpp.obj -c C:\Users\helen\Documents\Pacman-main\main.cpp
 
 CMakeFiles/Pacman.dir/main.cpp.i: cmake_force
@@ -300,7 +315,7 @@ CMakeFiles/Pacman.dir/utils.cpp.obj: CMakeFiles/Pacman.dir/flags.make
 CMakeFiles/Pacman.dir/utils.cpp.obj: CMakeFiles/Pacman.dir/includes_CXX.rsp
 CMakeFiles/Pacman.dir/utils.cpp.obj: C:/Users/helen/Documents/Pacman-main/utils.cpp
 CMakeFiles/Pacman.dir/utils.cpp.obj: CMakeFiles/Pacman.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\helen\Documents\Pacman-main\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building CXX object CMakeFiles/Pacman.dir/utils.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\helen\Documents\Pacman-main\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building CXX object CMakeFiles/Pacman.dir/utils.cpp.obj"
 	C:\msys64\ucrt64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Pacman.dir/utils.cpp.obj -MF CMakeFiles\Pacman.dir\utils.cpp.obj.d -o CMakeFiles\Pacman.dir\utils.cpp.obj -c C:\Users\helen\Documents\Pacman-main\utils.cpp
 
 CMakeFiles/Pacman.dir/utils.cpp.i: cmake_force
@@ -325,6 +340,7 @@ Pacman_OBJECTS = \
 "CMakeFiles/Pacman.dir/GameObjects/figures.cpp.obj" \
 "CMakeFiles/Pacman.dir/GameObjects/ghost.cpp.obj" \
 "CMakeFiles/Pacman.dir/GameObjects/items.cpp.obj" \
+"CMakeFiles/Pacman.dir/GameObjects/lives.cpp.obj" \
 "CMakeFiles/Pacman.dir/GameObjects/pacman.cpp.obj" \
 "CMakeFiles/Pacman.dir/GameObjects/points.cpp.obj" \
 "CMakeFiles/Pacman.dir/main.cpp.obj" \
@@ -345,6 +361,7 @@ Pacman.exe: CMakeFiles/Pacman.dir/Display/userManger.cpp.obj
 Pacman.exe: CMakeFiles/Pacman.dir/GameObjects/figures.cpp.obj
 Pacman.exe: CMakeFiles/Pacman.dir/GameObjects/ghost.cpp.obj
 Pacman.exe: CMakeFiles/Pacman.dir/GameObjects/items.cpp.obj
+Pacman.exe: CMakeFiles/Pacman.dir/GameObjects/lives.cpp.obj
 Pacman.exe: CMakeFiles/Pacman.dir/GameObjects/pacman.cpp.obj
 Pacman.exe: CMakeFiles/Pacman.dir/GameObjects/points.cpp.obj
 Pacman.exe: CMakeFiles/Pacman.dir/main.cpp.obj
@@ -353,7 +370,7 @@ Pacman.exe: CMakeFiles/Pacman.dir/build.make
 Pacman.exe: CMakeFiles/Pacman.dir/linkLibs.rsp
 Pacman.exe: CMakeFiles/Pacman.dir/objects1.rsp
 Pacman.exe: CMakeFiles/Pacman.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=C:\Users\helen\Documents\Pacman-main\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Linking CXX executable Pacman.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=C:\Users\helen\Documents\Pacman-main\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Linking CXX executable Pacman.exe"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\Pacman.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

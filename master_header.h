@@ -11,6 +11,8 @@
 #include "GameObjects/figures.h"
 #include "GameObjects/game_objects.h"
 #include "GameObjects/points.h"
+#include "GameObjects/lives.h"
+
 
 #include "Controls/player_controller.h"
 #include "Controls/controller.h"

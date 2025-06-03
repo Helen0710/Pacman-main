@@ -17,11 +17,13 @@ public:
 
     void drawNameInput();           // Name-Eingabe anzeigen
     bool isNameEntered() const;
+    void reset();
 
 private:
     std::string currentUser;
     char nameBuffer[32];
     bool nameEntered;
+    
 };
 
 #endif // USER_MANAGER_H

@@ -1,6 +1,7 @@
 #include "check_collision.h"
 #include <cmath>
 
+
 bool CheckCollision::isPacmanCollidingWithGhost(const Figure& pacman, const Figure& ghost) {
     // Calculate the distance between PacMan and the ghost
     float dx = pacman.getPx() - ghost.getPx();
