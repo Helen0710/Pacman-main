@@ -1,6 +1,6 @@
 #pragma once
 #include "../Board/board.h"
-#include "../Board/config.h"
+#include "../config.h"
 #include "../utils.h"
 #include "level.h"
 
@@ -15,13 +15,14 @@ class CheckPosition {
     bool isWalkableForPacman(int x, int y) const;
     bool isWalkableForGhost(int x, int y) const;
     bool isWall(int x, int y) const;
-    bool isCoin(int x, int y) const;
     bool isPortal(int x, int y) const;
 
 
     //bool isValidPosition(int y, int x) const;
 
     private:
-        char grid[LEVEL_HEIGHT][LEVEL_WIDTH + 1]; // +1 for null terminator
+        std::vector<std::vector<char>> grid; // 2D-Array als Zeichenkette, z.B. "##########"
+        int wrapX(int x) const;
+        int wrapY(int y) const;
        
 };

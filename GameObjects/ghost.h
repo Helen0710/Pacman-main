@@ -8,9 +8,11 @@
 #include "../Controls/ghost_controller.h"
 
 #include "../Board/check_position.h"
-#include "../Board/config.h"
+#include "../config.h"
 
 #include "../utils.h"
+
+class GhostController;
 
 class Ghost : public Figure {
     private:
@@ -20,5 +22,7 @@ class Ghost : public Figure {
         void draw() const override;
         bool canMoveTo(const CheckPosition& checkPos, int x, int y) const override;
         void update(const CheckPosition& checkPos) override;
-        GhostController* getController() const { return static_cast<GhostController*>(controller); }
+        void setSpeed(float newSpeed);
+        GhostController* getController();
+        void resetForNewGame(int x, int y);
 };

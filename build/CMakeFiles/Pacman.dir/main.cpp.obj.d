@@ -1,6 +1,7 @@
 CMakeFiles/Pacman.dir/main.cpp.obj: \
  C:\Users\helen\Documents\Pacman-main\main.cpp \
- C:\Users\helen\Documents\Pacman-main\master_header.h \
+ C:\Users\helen\Documents\Pacman-main\Game/game.h \
+ C:/Users/helen/Documents/Pacman-main/master_header.h \
  C:/raylib/raylib/src/raylib.h \
  C:/msys64/ucrt64/lib/gcc/x86_64-w64-mingw32/15.1.0/include/stdarg.h \
  C:/msys64/ucrt64/include/stdarg.h \
@@ -9,7 +10,7 @@ CMakeFiles/Pacman.dir/main.cpp.obj: \
  C:/msys64/ucrt64/include/_mingw_mac.h \
  C:/msys64/ucrt64/include/_mingw_secapi.h \
  C:/msys64/ucrt64/include/sdks/_mingw_ddk.h \
- C:\Users\helen\Documents\Pacman-main\Board/board.h \
+ C:/Users/helen/Documents/Pacman-main/Board/board.h \
  C:/msys64/ucrt64/include/c++/15.1.0/vector \
  C:/msys64/ucrt64/include/c++/15.1.0/bits/requires_hosted.h \
  C:/msys64/ucrt64/include/c++/15.1.0/x86_64-w64-mingw32/bits/c++config.h \
@@ -67,38 +68,8 @@ CMakeFiles/Pacman.dir/main.cpp.obj: \
  C:/msys64/ucrt64/include/c++/15.1.0/bits/uses_allocator_args.h \
  C:/msys64/ucrt64/include/c++/15.1.0/tuple \
  C:/Users/helen/Documents/Pacman-main/utils.h \
- C:\Users\helen\Documents\Pacman-main\Board/config.h \
- C:\Users\helen\Documents\Pacman-main\Board/level.h \
- C:\Users\helen\Documents\Pacman-main\Board/check_position.h \
- C:\Users\helen\Documents\Pacman-main\GameObjects/pacman.h \
- C:/Users/helen/Documents/Pacman-main/Controls/controller.h \
- C:/Users/helen/Documents/Pacman-main/Controls/player_controller.h \
- C:\Users\helen\Documents\Pacman-main\GameObjects/figures.h \
- C:\Users\helen\Documents\Pacman-main\GameObjects/game_objects.h \
- C:\Users\helen\Documents\Pacman-main\GameObjects/ghost.h \
- C:/Users/helen/Documents/Pacman-main/Controls/ghost_controller.h \
- C:/msys64/ucrt64/include/c++/15.1.0/cstdlib \
- C:/msys64/ucrt64/include/stdlib.h \
- C:/msys64/ucrt64/include/corecrt_wstdlib.h \
- C:/msys64/ucrt64/lib/gcc/x86_64-w64-mingw32/15.1.0/include/limits.h \
- C:/msys64/ucrt64/lib/gcc/x86_64-w64-mingw32/15.1.0/include/syslimits.h \
- C:/msys64/ucrt64/include/limits.h \
- C:/msys64/ucrt64/include/sec_api/stdlib_s.h \
- C:/msys64/ucrt64/include/c++/15.1.0/stdlib.h \
- C:/msys64/ucrt64/include/malloc.h \
- C:/msys64/ucrt64/lib/gcc/x86_64-w64-mingw32/15.1.0/include/mm_malloc.h \
- C:/msys64/ucrt64/include/errno.h \
- C:/msys64/ucrt64/include/c++/15.1.0/bits/std_abs.h \
- C:/msys64/ucrt64/include/c++/15.1.0/ctime \
- C:/msys64/ucrt64/include/time.h C:/msys64/ucrt64/include/sys/timeb.h \
- C:/msys64/ucrt64/include/sec_api/sys/timeb_s.h \
- C:/msys64/ucrt64/include/_timeval.h \
- C:/msys64/ucrt64/include/pthread_time.h \
- C:/msys64/ucrt64/include/pthread_compat.h \
- C:\Users\helen\Documents\Pacman-main\GameObjects/points.h \
- C:\Users\helen\Documents\Pacman-main\GameObjects/lives.h \
- C:/Users/helen/Documents/Pacman-main/Controls/check_collision.h \
- C:\Users\helen\Documents\Pacman-main\Display/start_screen.h \
+ C:/Users/helen/Documents/Pacman-main/config.h \
+ C:/Users/helen/Documents/Pacman-main/Board/level.h \
  C:/msys64/ucrt64/include/c++/15.1.0/string \
  C:/msys64/ucrt64/include/c++/15.1.0/bits/stringfwd.h \
  C:/msys64/ucrt64/include/c++/15.1.0/bits/char_traits.h \
@@ -106,6 +77,7 @@ CMakeFiles/Pacman.dir/main.cpp.obj: \
  C:/msys64/ucrt64/include/c++/15.1.0/cwchar \
  C:/msys64/ucrt64/include/wchar.h \
  C:/msys64/ucrt64/include/corecrt_stdio_config.h \
+ C:/msys64/ucrt64/include/corecrt_wstdlib.h \
  C:/msys64/ucrt64/include/corecrt_wctype.h \
  C:/msys64/ucrt64/include/_mingw_off_t.h \
  C:/msys64/ucrt64/include/_mingw_stat64.h \
@@ -125,11 +97,90 @@ CMakeFiles/Pacman.dir/main.cpp.obj: \
  C:/msys64/ucrt64/include/c++/15.1.0/string_view \
  C:/msys64/ucrt64/include/c++/15.1.0/bits/string_view.tcc \
  C:/msys64/ucrt64/include/c++/15.1.0/ext/string_conversions.h \
+ C:/msys64/ucrt64/include/c++/15.1.0/cstdlib \
+ C:/msys64/ucrt64/include/stdlib.h \
+ C:/msys64/ucrt64/lib/gcc/x86_64-w64-mingw32/15.1.0/include/limits.h \
+ C:/msys64/ucrt64/lib/gcc/x86_64-w64-mingw32/15.1.0/include/syslimits.h \
+ C:/msys64/ucrt64/include/limits.h \
+ C:/msys64/ucrt64/include/sec_api/stdlib_s.h \
+ C:/msys64/ucrt64/include/c++/15.1.0/stdlib.h \
+ C:/msys64/ucrt64/include/malloc.h \
+ C:/msys64/ucrt64/lib/gcc/x86_64-w64-mingw32/15.1.0/include/mm_malloc.h \
+ C:/msys64/ucrt64/include/errno.h \
+ C:/msys64/ucrt64/include/c++/15.1.0/bits/std_abs.h \
  C:/msys64/ucrt64/include/c++/15.1.0/cstdio \
  C:/msys64/ucrt64/include/c++/15.1.0/cerrno \
  C:/msys64/ucrt64/include/c++/15.1.0/bits/charconv.h \
  C:/msys64/ucrt64/include/c++/15.1.0/bits/basic_string.tcc \
- C:\Users\helen\Documents\Pacman-main\Display/scoreboard.h \
+ C:/Users/helen/Documents/Pacman-main/Board/check_position.h \
+ C:/Users/helen/Documents/Pacman-main/GameObjects/pacman.h \
+ C:/Users/helen/Documents/Pacman-main/Controls/controller.h \
+ C:/Users/helen/Documents/Pacman-main/Controls/player_controller.h \
+ C:/Users/helen/Documents/Pacman-main/GameObjects/figures.h \
+ C:/Users/helen/Documents/Pacman-main/GameObjects/game_objects.h \
+ C:/Users/helen/Documents/Pacman-main/GameObjects/ghost.h \
+ C:/Users/helen/Documents/Pacman-main/Controls/ghost_controller.h \
+ C:/Users/helen/Documents/Pacman-main/GameObjects/points.h \
+ C:/Users/helen/Documents/Pacman-main/GameObjects/items.h \
+ C:/Users/helen/Documents/Pacman-main/GameObjects/lives.h \
+ C:/Users/helen/Documents/Pacman-main/Controls/check_collision.h \
+ C:/Users/helen/Documents/Pacman-main/GameObjects/fruits.h \
+ C:/Users/helen/Documents/Pacman-main/Display/start_screen.h \
+ C:/Users/helen/Documents/Pacman-main/Display/scoreBoard.h \
+ C:/msys64/ucrt64/include/c++/15.1.0/fstream \
+ C:/msys64/ucrt64/include/c++/15.1.0/istream \
+ C:/msys64/ucrt64/include/c++/15.1.0/ios \
+ C:/msys64/ucrt64/include/c++/15.1.0/exception \
+ C:/msys64/ucrt64/include/c++/15.1.0/bits/exception_ptr.h \
+ C:/msys64/ucrt64/include/c++/15.1.0/bits/cxxabi_init_exception.h \
+ C:/msys64/ucrt64/include/c++/15.1.0/typeinfo \
+ C:/msys64/ucrt64/include/c++/15.1.0/bits/nested_exception.h \
+ C:/msys64/ucrt64/include/c++/15.1.0/bits/ios_base.h \
+ C:/msys64/ucrt64/include/c++/15.1.0/ext/atomicity.h \
+ C:/msys64/ucrt64/include/c++/15.1.0/x86_64-w64-mingw32/bits/gthr.h \
+ C:/msys64/ucrt64/include/c++/15.1.0/x86_64-w64-mingw32/bits/gthr-default.h \
+ C:/msys64/ucrt64/include/pthread.h C:/msys64/ucrt64/include/sys/types.h \
+ C:/msys64/ucrt64/include/process.h \
+ C:/msys64/ucrt64/include/corecrt_startup.h \
+ C:/msys64/ucrt64/include/signal.h \
+ C:/msys64/ucrt64/include/pthread_signal.h \
+ C:/msys64/ucrt64/include/time.h C:/msys64/ucrt64/include/sys/timeb.h \
+ C:/msys64/ucrt64/include/sec_api/sys/timeb_s.h \
+ C:/msys64/ucrt64/include/_timeval.h \
+ C:/msys64/ucrt64/include/pthread_time.h \
+ C:/msys64/ucrt64/include/pthread_compat.h \
+ C:/msys64/ucrt64/include/sched.h \
+ C:/msys64/ucrt64/include/pthread_unistd.h \
+ C:/msys64/ucrt64/include/c++/15.1.0/x86_64-w64-mingw32/bits/atomic_word.h \
+ C:/msys64/ucrt64/include/c++/15.1.0/bits/locale_classes.h \
+ C:/msys64/ucrt64/include/c++/15.1.0/bits/locale_classes.tcc \
+ C:/msys64/ucrt64/include/c++/15.1.0/system_error \
+ C:/msys64/ucrt64/include/c++/15.1.0/x86_64-w64-mingw32/bits/error_constants.h \
+ C:/msys64/ucrt64/include/c++/15.1.0/stdexcept \
+ C:/msys64/ucrt64/include/c++/15.1.0/streambuf \
+ C:/msys64/ucrt64/include/c++/15.1.0/bits/streambuf.tcc \
+ C:/msys64/ucrt64/include/c++/15.1.0/bits/basic_ios.h \
+ C:/msys64/ucrt64/include/c++/15.1.0/bits/locale_facets.h \
+ C:/msys64/ucrt64/include/c++/15.1.0/cwctype \
+ C:/msys64/ucrt64/include/wctype.h \
+ C:/msys64/ucrt64/include/c++/15.1.0/x86_64-w64-mingw32/bits/ctype_base.h \
+ C:/msys64/ucrt64/include/c++/15.1.0/bits/streambuf_iterator.h \
+ C:/msys64/ucrt64/include/c++/15.1.0/x86_64-w64-mingw32/bits/ctype_inline.h \
+ C:/msys64/ucrt64/include/c++/15.1.0/bits/locale_facets.tcc \
+ C:/msys64/ucrt64/include/c++/15.1.0/bits/basic_ios.tcc \
+ C:/msys64/ucrt64/include/c++/15.1.0/ostream \
+ C:/msys64/ucrt64/include/c++/15.1.0/bits/ostream.h \
+ C:/msys64/ucrt64/include/c++/15.1.0/bits/ostream.tcc \
+ C:/msys64/ucrt64/include/c++/15.1.0/bits/istream.tcc \
+ C:/msys64/ucrt64/include/c++/15.1.0/bits/codecvt.h \
+ C:/msys64/ucrt64/include/c++/15.1.0/x86_64-w64-mingw32/bits/basic_file.h \
+ C:/msys64/ucrt64/include/c++/15.1.0/x86_64-w64-mingw32/bits/c++io.h \
+ C:/msys64/ucrt64/include/c++/15.1.0/bits/fstream.tcc \
+ C:/msys64/ucrt64/include/c++/15.1.0/sstream \
+ C:/msys64/ucrt64/include/c++/15.1.0/bits/sstream.tcc \
+ C:/msys64/ucrt64/include/c++/15.1.0/cstring \
+ C:/msys64/ucrt64/include/string.h \
+ C:/msys64/ucrt64/include/sec_api/string_s.h \
  C:/msys64/ucrt64/include/c++/15.1.0/unordered_map \
  C:/msys64/ucrt64/include/c++/15.1.0/bits/unordered_map.h \
  C:/msys64/ucrt64/include/c++/15.1.0/bits/hashtable.h \
@@ -138,9 +189,18 @@ CMakeFiles/Pacman.dir/main.cpp.obj: \
  C:/msys64/ucrt64/include/c++/15.1.0/bits/enable_special_members.h \
  C:/msys64/ucrt64/include/c++/15.1.0/bits/node_handle.h \
  C:/msys64/ucrt64/include/c++/15.1.0/bits/erase_if.h \
- C:\Users\helen\Documents\Pacman-main\Display/userManager.h \
+ C:/msys64/ucrt64/include/c++/15.1.0/algorithm \
+ C:/msys64/ucrt64/include/c++/15.1.0/bits/stl_algo.h \
+ C:/msys64/ucrt64/include/c++/15.1.0/bits/algorithmfwd.h \
+ C:/msys64/ucrt64/include/c++/15.1.0/bits/stl_heap.h \
+ C:/msys64/ucrt64/include/c++/15.1.0/bits/uniform_int_dist.h \
+ C:/msys64/ucrt64/include/c++/15.1.0/bits/stl_tempbuf.h \
+ C:/msys64/ucrt64/include/c++/15.1.0/pstl/glue_algorithm_defs.h \
+ C:/msys64/ucrt64/include/c++/15.1.0/pstl/execution_defs.h \
+ C:/Users/helen/Documents/Pacman-main/Display/UserManager.h \
  C:/msys64/ucrt64/include/c++/15.1.0/utility \
  C:/msys64/ucrt64/include/c++/15.1.0/bits/stl_relops.h \
+ C:/Users/helen/Documents/Pacman-main/Display/instructions.h \
  C:/msys64/ucrt64/include/c++/15.1.0/math.h \
  C:/msys64/ucrt64/include/c++/15.1.0/cmath \
  C:/msys64/ucrt64/include/math.h \
@@ -157,4 +217,5 @@ CMakeFiles/Pacman.dir/main.cpp.obj: \
  C:/msys64/ucrt64/include/c++/15.1.0/tr1/modified_bessel_func.tcc \
  C:/msys64/ucrt64/include/c++/15.1.0/tr1/poly_hermite.tcc \
  C:/msys64/ucrt64/include/c++/15.1.0/tr1/poly_laguerre.tcc \
- C:/msys64/ucrt64/include/c++/15.1.0/tr1/riemann_zeta.tcc
+ C:/msys64/ucrt64/include/c++/15.1.0/tr1/riemann_zeta.tcc \
+ C:/msys64/ucrt64/include/c++/15.1.0/iostream

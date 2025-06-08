@@ -1,4 +1,5 @@
 #include "figures.h"
+#include "../Board/level.h" // Add this include at the top if not present
 #include <cmath>
 #include <iostream>
 
@@ -41,12 +42,19 @@ void Figure::update(const CheckPosition& checkPos) {
     // --------- Portal Logic ---------
     // If the next cell is a portal, teleport to the other portal and return
     if (canMoveTo(checkPos, nextX, nextY) && checkPos.isPortal(nextX, nextY)) {
-        for (int x = 0; x < LEVEL_WIDTH; ++x) {
+        for (int x = 0; x < getLevelWidth(); ++x) { // <-- fix: use getLevelWidth()
             if (x != nextX && checkPos.isPortal(x, nextY)) {
                 gridX = x;
                 gridY = nextY;
-                px = gridX * CELL_SIZE;
-                py = gridY * CELL_SIZE;
+                px = static_cast<float>(gridX * CELL_SIZE);
+                py = static_cast<float>(gridY * CELL_SIZE);
+                // --- wrap after teleport ---
+                int w = getLevelWidth();
+                int h = getLevelHeight();
+                gridX = (gridX + w) % w;
+                gridY = (gridY + h) % h;
+                px = static_cast<float>(gridX * CELL_SIZE);
+                py = static_cast<float>(gridY * CELL_SIZE);
                 return;
             }
         }
@@ -59,13 +67,18 @@ void Figure::update(const CheckPosition& checkPos) {
         if (nearCenterOfCell()) {
             gridX = static_cast<int>(px) / CELL_SIZE;
             gridY = static_cast<int>(py) / CELL_SIZE;
-            px = gridX * CELL_SIZE;
-            py = gridY * CELL_SIZE;
+            // --- wrap after normal movement ---
+            int w = getLevelWidth();
+            int h = getLevelHeight();
+            gridX = (gridX + w) % w;
+            gridY = (gridY + h) % h;
+            px = static_cast<float>(gridX * CELL_SIZE);
+            py = static_cast<float>(gridY * CELL_SIZE);
         }
     } else {
         // Snap to grid if blocked
-        px = gridX * CELL_SIZE;
-        py = gridY * CELL_SIZE;
+        px = static_cast<float>(gridX * CELL_SIZE);
+        py = static_cast<float>(gridY * CELL_SIZE);
     }
 }   
 

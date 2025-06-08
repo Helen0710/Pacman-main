@@ -1,8 +1,7 @@
 #pragma once
-#include "../Board/config.h"
+#include "../config.h"
 #include "../utils.h"
 #include "../Controls/controller.h"
-
 #include "../Board/check_position.h" 
 #include "game_objects.h"   
 

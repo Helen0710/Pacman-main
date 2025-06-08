@@ -1,11 +1,5 @@
 #pragma once
-#include "controller.h"
-#include "../GameObjects/pacman.h"
-#include "../Board/check_position.h"
-#include "../utils.h"
-#include <vector>
-#include <cstdlib>
-#include <ctime>
+#include "../master_header.h"
 
 enum class GhostMode { SCATTER, CHASE};
 
@@ -24,6 +18,7 @@ class GhostController : public Controller {
         virtual Direction getNextDirection(int gridX, int gridY, const CheckPosition& checkPos) override = 0;
         void updateMode(float deltaTime); // Update the ghost's mode based on time
         GhostMode getMode() const { return mode; } // Get the current mode of the ghost
+        static void UpdateAllGhostModes(const std::vector<Figure*>& figures, float deltaTime);
 
 };
         

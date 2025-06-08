@@ -1,38 +1,42 @@
 #include "board.h"
-#include "level.h"  // enthält levelData
+#include "level.h"
 #include "raylib.h"
+#include <vector>
+#include <string>
 
-// Konstruktor: Initialisiert das Spielfeld with EMPTY
+// Konstruktor: Initialisiert das Spielfeld mit den geladenen Daten
 Board::Board() {
-    for (int y = 0; y < LEVEL_HEIGHT; ++y) {
-        for (int x = 0; x < LEVEL_WIDTH; ++x) {
-            grid[y][x] = levelData[y][x];
-        }
-        grid[y][LEVEL_WIDTH] = '\0'; // Optional, for C-string compatibility
+    int h = getLevelHeight();
+    int w = getLevelWidth();
+    grid.resize(h);
+    for (int y = 0; y < h; ++y) {
+        grid[y] = getLevelRow(y); // Kopiert die Zeile als std::string
     }
 }
 
 char Board::getCharAt(int y, int x) const {
-    if (y >= 0 && y < LEVEL_HEIGHT && x >= 0 && x < LEVEL_WIDTH) {
+    int h = getLevelHeight();
+    int w = getLevelWidth();
+    if (y >= 0 && y < h && x >= 0 && x < w) {
         return grid[y][x];
     }
-    return '#'; // Return '#' for out-of-bounds access, indicating a wall
+    return '#'; // Out-of-bounds = Wand
 }
-
-
 
 void Board::getStartPositions(Position& pacmanStart,
                               Position& blinkyStart,
                               Position& pinkyStart,
                               Position& inkyStart,
                               Position& clydeStart) {
-    for (int row = 0; row < LEVEL_HEIGHT; ++row) {
-        for (int col = 0; col < LEVEL_WIDTH; ++col) {
+    int h = getLevelHeight();
+    int w = getLevelWidth();
+    for (int row = 0; row < h; ++row) {
+        for (int col = 0; col < w; ++col) {
             char tile = grid[row][col];
             switch (tile) {
                 case PACMAN:
                     pacmanStart = {col, row};
-                    grid[row][col] = '.'; // Now safe to modify!
+                    grid[row][col] = '.'; // Feld leeren
                     break;
                 case BLINKY:
                     blinkyStart = {col, row};
@@ -53,23 +57,22 @@ void Board::getStartPositions(Position& pacmanStart,
             }
         }
     }
-                                    
-
 }
 
 // Zeichnet das Spielfeld
 void Board::draw() const {
-    for (int y = 0; y < LEVEL_HEIGHT; ++y) {
-        for (int x = 0; x < LEVEL_WIDTH; ++x) {
+    int h = getLevelHeight();
+    int w = getLevelWidth();
+    for (int y = 0; y < h; ++y) {
+        const std::string& row = grid[y];
+        for (int x = 0; x < w; ++x) {
+            char tile = row[x];
             int px = x * CELL_SIZE;
-            int py = y * CELL_SIZE + TOP_MARGIN; // Add top margin for scoreboard
+            int py = y * CELL_SIZE + TOP_MARGIN;
 
-            switch (levelData[y][x]) {
+            switch (tile) {
                 case WALL:
                     DrawRectangle(px, py, CELL_SIZE, CELL_SIZE, DARKBLUE);
-                    break;
-                case COIN:
-                    DrawCircle(px + CELL_SIZE / 2, py + CELL_SIZE / 2, CELL_SIZE / 6, YELLOW);
                     break;
                 case TUNNEL:
                     DrawRectangle(px, py + CELL_SIZE / 2 - 4, CELL_SIZE, 8, PINK);
@@ -80,3 +83,4 @@ void Board::draw() const {
         }
     }
 }
+

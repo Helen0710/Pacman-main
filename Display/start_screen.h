@@ -3,6 +3,7 @@
 #include "raylib.h"
 #include <string>
 #include <vector>
+#include "../config.h"
 
 class StartScreen {
 private:

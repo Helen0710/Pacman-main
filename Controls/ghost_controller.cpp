@@ -1,16 +1,10 @@
 #include "ghost_controller.h"
-#include "../GameObjects/figures.h" 
-#include <vector>
 
-#include <cmath>
-#include <algorithm>
 
 // Constructor	
 GhostController::GhostController(const PacMan* pac, const Figure* blinky)
     : currentDir(Direction::RIGHT), pacman(pac), blinky(blinky) {}
 
-
-// Choose the best direction for the ghost to move towards the target
 Direction GhostController::chooseBestDirection(int gx, int gy, const CheckPosition& checkPos, Position target){
     std::vector<Direction> possibleDirections;
 
@@ -59,7 +53,14 @@ void GhostController::updateMode( float deltaTime) {
     }
 }
 
-
+void GhostController::UpdateAllGhostModes(const std::vector<Figure*>& figures, float deltaTime) {
+    for (auto* fig : figures) {
+        Ghost* ghost = dynamic_cast<Ghost*>(fig);
+        if (ghost) {
+            ghost->getController()->updateMode(deltaTime);
+        }
+    }
+}
 
 // BlinkyController
 // BlinkyController is the ghost that always chases PacMan
@@ -68,7 +69,7 @@ BlinkyController::BlinkyController(const PacMan* pac) : GhostController(pac) {}
 
 Direction BlinkyController::getNextDirection(int gx, int gy, const CheckPosition& checkPos) {
     if (getMode() == GhostMode::SCATTER) {
-        Position target = { LEVEL_WIDTH - 1, 0 }; // Top-right
+        Position target = { getLevelWidth() - 1, 0 }; // Top-right
         return chooseBestDirection(gx, gy, checkPos, target);
     }
     Position target = { pacman->getX(), pacman->getY() };
@@ -77,7 +78,7 @@ Direction BlinkyController::getNextDirection(int gx, int gy, const CheckPosition
 
 // PinkyController
 // PinkyController is the ghost that tries to predict PacMan's next position
-// Sacatter Mode: Top left corner
+// Scatter Mode: Top left corner
 PinkyController::PinkyController(const PacMan* pac) : GhostController(pac) {}
 
 Direction PinkyController::getNextDirection(int gx, int gy, const CheckPosition& checkPos) {
@@ -99,7 +100,7 @@ InkyController::InkyController(const PacMan* pac, const Figure* blinky) : GhostC
 
 Direction InkyController::getNextDirection(int gx, int gy, const CheckPosition& checkPos) {
     if (getMode() == GhostMode::SCATTER) {
-        Position target = { LEVEL_WIDTH - 1, LEVEL_HEIGHT - 1 }; // Bottom-right
+        Position target = { getLevelWidth() - 1, getLevelHeight() - 1 }; // Bottom-right
         return chooseBestDirection(gx, gy, checkPos, target);
     }
     int px = pacman->getX() + 2 * pacman->getCurrentDir().dx;
@@ -129,7 +130,7 @@ Direction ClydeController::getNextDirection(int gx, int gy, const CheckPosition&
         Position target = { pacman->getX(), pacman->getY() };
         return chooseBestDirection(gx, gy, checkPos, target);
     } else { // Scatter mode
-        Position target = { 0, LEVEL_HEIGHT - 1 }; // Example scatter target
+        Position target = { 0, getLevelHeight() - 1 }; // Bottom-left
         return chooseBestDirection(gx, gy, checkPos, target);
     }
 }

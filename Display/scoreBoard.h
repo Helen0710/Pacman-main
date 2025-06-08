@@ -1,8 +1,15 @@
 #pragma once
 #include "raylib.h"
+
+#include "../config.h"
+
+#include <fstream>
+#include <sstream>
+#include <cstring>
 #include <vector>
 #include <string>
 #include <unordered_map>
+#include <algorithm>
 
 class Scoreboard {
 private:
@@ -20,6 +27,7 @@ public:
     void AddUser(const std::string& username);
     void IncreaseScore(const std::string& username, int amount);
     int GetScore(const std::string& username);
+   void SetScores(const std::vector<std::pair<std::string, int>>& newScores);
     void drawScore();
      
 

@@ -10,12 +10,15 @@ set(RAYLIB_ROOT "C:/raylib/raylib")
 include_directories(${RAYLIB_ROOT}/src)
 link_directories(${RAYLIB_ROOT}/build/raylib)
 
-# Quelldateien suchen (nur im Projektverzeichnis, nicht im CMake build)
+# Pfad zu miniaudio (angenommen liegt unter libs/miniaudio)
+include_directories(${CMAKE_SOURCE_DIR}./miniaudio)
+
+# Quelldateien suchen
 file(GLOB_RECURSE SOURCES CONFIGURE_DEPENDS
     "${CMAKE_SOURCE_DIR}/*.cpp"
 )
 
-# Build-Ordner-Dateien rausfiltern (z. B. CMakeCXXCompilerId.cpp)
+# Build-Ordner-Dateien rausfiltern
 foreach(file ${SOURCES})
     string(FIND "${file}" "${CMAKE_BINARY_DIR}" EXCLUDE_POS)
     if(NOT EXCLUDE_POS EQUAL -1)

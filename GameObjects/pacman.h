@@ -1,7 +1,7 @@
 #pragma once
 
 #include "../Board/board.h"
-#include "../Board/config.h"
+#include "../config.h"
 #include "../Board/check_position.h"
 
 #include "../Controls/controller.h"
@@ -29,5 +29,6 @@ class PacMan : public Figure{
         void startDeathAnimation();
         PacManState getState() const { return state; } // Getter for the current state
         void resetState() { state = PacManState::Alive; deathTimer = 0.0f; } // Reset to alive state
+        void resetForNewGame(int x, int y);
 
 };

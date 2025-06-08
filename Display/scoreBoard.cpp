@@ -1,10 +1,5 @@
 #include "scoreboard.h"
-#include "raylib.h"
-#include "config.h"
-#include <fstream>
-#include <sstream>
-#include <unordered_map>
-#include <cstring>
+
 
 Scoreboard::Scoreboard(int width, int height)
     : screenWidth(width), screenHeight(height) {
@@ -16,12 +11,11 @@ Scoreboard::Scoreboard(int width, int height)
 
 void Scoreboard::LoadScores(const std::string& filename) {
     scores.clear();
-    std::ofstream datei (filename);
-    if (!datei) {
+    std::ifstream in(filename);
+    if (!in) {
         TraceLog(LOG_ERROR, "Could not open file %s for reading", filename.c_str());
         return;
     }
-    std::ifstream in(filename);
     std::string line;
     while (std::getline(in, line)) {
         std::istringstream ss(line);
@@ -57,33 +51,61 @@ int Scoreboard::GetScore(const std::string& username) {
 
 void Scoreboard::drawScore() {
     ClearBackground(BLACK);
-
     DrawText("Scoreboard", 20, 20, 30, WHITE);
 
+    // Sortiere nach Punktzahl absteigend
+    std::vector<std::pair<std::string, int>> sortedScores(scores.begin(), scores.end());
+    std::sort(sortedScores.begin(), sortedScores.end(),
+              [](const auto& a, const auto& b) { return a.second > b.second; });
+
     int y = 60;
-    for (auto& [name, score] : scores) {
-        DrawText(TextFormat("%s: %d", name.c_str(), score), 20, y, 20, YELLOW);
+    int rank = 1;
+    for (const auto& [name, score] : sortedScores) {
+        Color color = YELLOW;
+        std::string prefix;
+
+        switch (rank) {
+            case 1: prefix = "🥇 "; color = GOLD; break;
+            case 2: prefix = "🥈 "; color = LIGHTGRAY; break;
+            case 3: prefix = "🥉 "; color = ORANGE; break;
+            default: prefix = std::to_string(rank) + ". "; break;
+        }
+
+        std::string display = prefix + name + ": " + std::to_string(score);
+        if (name == currentUser) {
+            DrawText(display.c_str(), 20, y, 22, GREEN); // aktueller Spieler grün markieren
+        } else {
+            DrawText(display.c_str(), 20, y, 20, color);
+        }
+
         y += 30;
+        ++rank;
     }
 
     if (showInput) {
         DrawText("Enter name:", 20, y + 10, 20, WHITE);
         DrawText(nameBuffer, 200, y + 10, 20, WHITE);
+
         if (IsKeyPressed(KEY_ENTER)) {
             AddUser(nameBuffer);
             showInput = false;
         } else {
             int key = GetCharPressed();
             if (key > 0 && strlen(nameBuffer) < 31) {
-                int len = strlen(nameBuffer);
+                int len = static_cast<int>(strlen(nameBuffer));
                 nameBuffer[len] = (char)key;
                 nameBuffer[len + 1] = '\0';
             }
             if (IsKeyPressed(KEY_BACKSPACE)) {
-                int len = strlen(nameBuffer);
+                int len = static_cast<int>(strlen(nameBuffer));
                 if (len > 0) nameBuffer[len - 1] = '\0';
             }
         }
     }
-
+}
+void Scoreboard::SetScores(const std::vector<std::pair<std::string, int>>& newScores) {
+    scores.clear();
+    for (const auto& [name, score] : newScores) {
+        scores[name] = score;
+    }
 }

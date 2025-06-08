@@ -1,13 +1,18 @@
 #include "points.h"
-#include "raylib.h"
 
 
-Points::Points(const CheckPosition& checkPos) {
-    points.resize(LEVEL_HEIGHT, std::vector<bool>(LEVEL_WIDTH, false));
+
+// Constructor: initialize the grid of points
+Points::Points(const CheckPosition& checkPos)
+    : Item(0, 0, 10) // Dummy values, since Points manages a grid, not a single item
+{
+    int h = getLevelHeight();
+    int w = getLevelWidth();
+    points.resize(h, std::vector<bool>(w, false));
     int count = 0;
-    for (int y = 0; y < LEVEL_HEIGHT; ++y) {
-        for (int x = 0; x < LEVEL_WIDTH; ++x) {
-            if (checkPos.isWalkableForPacman(x,y)) {
+    for (int y = 0; y < h; ++y) {
+        for (int x = 0; x < w; ++x) {
+            if (checkPos.isWalkableForPacman(x, y) && isPointAllowed(x, y)) {
                 points[y][x] = true;
                 count++;
             }
@@ -17,17 +22,16 @@ Points::Points(const CheckPosition& checkPos) {
 }
 
 void Points::draw() const {
-    //TraceLog (LOG_INFO, "draw wurde aufgerufen");
-    for (int y = 0; y < LEVEL_HEIGHT; ++y) {
-        for (int x = 0; x < LEVEL_WIDTH; ++x) {
-            if (points[y][x]) {  // Klein geschrieben, Zugriff auf Member
+    int h = getLevelHeight();
+    int w = getLevelWidth();
+    for (int y = 0; y < h; ++y) {
+        for (int x = 0; x < w; ++x) {
+            if (points[y][x]) {
                 DrawCircle(x * CELL_SIZE + CELL_SIZE / 2, y * CELL_SIZE + CELL_SIZE / 2 + TOP_MARGIN, 3, YELLOW);
             }
         }
     }
 }
-
-
 
 bool Points::hasRemainingPoints() const {
     for (const auto& row : points) {
@@ -39,20 +43,40 @@ bool Points::hasRemainingPoints() const {
 }
 
 bool Points::getPoint(int y, int x) const {
-    return points[y][x];
+    return points[wrapY(y)][wrapX(x)];
 }
 
 void Points::setPoint(int y, int x, bool value) {
-    points[y][x] = value; // Setze den Punkt auf false, wenn PacMan ihn einsammelt
+    points[wrapY(y)][wrapX(x)] = value;
 }
+
 void Points::resetPoints(const CheckPosition& checkPos) {
-    for (int y = 0; y < LEVEL_HEIGHT; ++y) {
-        for (int x = 0; x < LEVEL_WIDTH; ++x) {
-            if (checkPos.isWalkableForPacman(x, y)) {
-                points[y][x] = true; // Setze alle Punkte zurück
+    int h = getLevelHeight();
+    int w = getLevelWidth();
+    for (int y = 0; y < h; ++y) {
+        for (int x = 0; x < w; ++x) {
+            if (checkPos.isWalkableForPacman(x, y) && isPointAllowed(x, y)) {
+                points[y][x] = true;
             } else {
-                points[y][x] = false; // Nicht begehbare Felder haben keine Punkte
+                points[y][x] = false;
             }
         }
     }
+}
+
+bool Points::isPointAllowed(int x, int y) const {
+    // Keine Punkte in der gesamten Portal-Reihe (z.B. Zeile 12/13)
+    if (y == 12 || y == 13) { // Passe ggf. an die tatsächliche Portal-Zeile an!
+        return false;
+    }
+    return true;
+}
+
+int Points::wrapX(int x) const {
+    int w = getLevelWidth();
+    return (x + w) % w;
+}
+int Points::wrapY(int y) const {
+    int h = getLevelHeight();
+    return (y + h) % h;
 }

@@ -1,6 +1,6 @@
 #pragma once
 #include "game_objects.h"
-#include "../Board/config.h"
+#include "../config.h"
 #include "../Board/check_position.h"
 #include "../Controls/check_collision.h"
 
@@ -21,3 +21,4 @@ public:
     bool isImmune() const;
     bool isGameOver() const;
 };
+    

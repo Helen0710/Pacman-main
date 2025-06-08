@@ -3,7 +3,7 @@
 #include "../GameObjects/figures.h"
 #include "../GameObjects/points.h"
 #include "../Board/check_position.h"
-#include "../Board/config.h"
+#include "../config.h"
 
 class CheckCollision {
     public:
@@ -14,6 +14,7 @@ class CheckCollision {
         static bool isPacmanCollidingWithPoint(const Figure& pacman, Points& points);
 
         // Check if pacman collides with Fruit
+        static bool isPacmanCollidingWithFruit(const Figure& pacman, const Item& fruit);
 
     
 };

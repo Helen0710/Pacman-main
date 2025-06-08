@@ -107,5 +107,5 @@ CMakeFiles/Pacman.dir/Display/start_screen.cpp.obj: \
  C:/msys64/ucrt64/include/c++/15.1.0/bits/stl_vector.h \
  C:/msys64/ucrt64/include/c++/15.1.0/bits/stl_bvector.h \
  C:/msys64/ucrt64/include/c++/15.1.0/bits/vector.tcc \
- C:/Users/helen/Documents/Pacman-main/Board/config.h \
+ C:/Users/helen/Documents/Pacman-main/config.h \
  C:/Users/helen/Documents/Pacman-main/Board/level.h

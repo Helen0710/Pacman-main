@@ -38,9 +38,11 @@ void Lives::update(float deltaTime) {
 
 // draw method to display lives and immunity status
 void Lives::draw() const {
+    int screenWidth = GetScreenWidth();
+    int screenHeight = GetScreenHeight();
     for (int i = 0; i < lives; ++i) {
         int x = 20 + i * (CELL_SIZE + 10); // Position each life with some spacing
-        int y = SCREEN_HEIGHT - BOTTOM_MARGIN + 10; // Bottom left corner
+        int y = screenHeight - BOTTOM_MARGIN + 10; // Bottom left corner
         DrawCircle(x + CELL_SIZE / 2, y + CELL_SIZE / 2, CELL_SIZE / 2, YELLOW); // Draw PacMan as a circle
         if (immune) {
             // Flash PacMan during immunity
@@ -65,6 +67,7 @@ bool Lives::isImmune() const {
 bool Lives::isGameOver() const {
     return lives <= 0;
 }
+
 
 
 

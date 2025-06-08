@@ -273,6 +273,54 @@ Controls/player_controller.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Pacman.dir\build.make CMakeFiles/Pacman.dir/Controls/player_controller.cpp.s
 .PHONY : Controls/player_controller.cpp.s
 
+Display/UserManager.obj: Display/UserManager.cpp.obj
+.PHONY : Display/UserManager.obj
+
+# target to build an object file
+Display/UserManager.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Pacman.dir\build.make CMakeFiles/Pacman.dir/Display/UserManager.cpp.obj
+.PHONY : Display/UserManager.cpp.obj
+
+Display/UserManager.i: Display/UserManager.cpp.i
+.PHONY : Display/UserManager.i
+
+# target to preprocess a source file
+Display/UserManager.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Pacman.dir\build.make CMakeFiles/Pacman.dir/Display/UserManager.cpp.i
+.PHONY : Display/UserManager.cpp.i
+
+Display/UserManager.s: Display/UserManager.cpp.s
+.PHONY : Display/UserManager.s
+
+# target to generate assembly for a file
+Display/UserManager.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Pacman.dir\build.make CMakeFiles/Pacman.dir/Display/UserManager.cpp.s
+.PHONY : Display/UserManager.cpp.s
+
+Display/instructions.obj: Display/instructions.cpp.obj
+.PHONY : Display/instructions.obj
+
+# target to build an object file
+Display/instructions.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Pacman.dir\build.make CMakeFiles/Pacman.dir/Display/instructions.cpp.obj
+.PHONY : Display/instructions.cpp.obj
+
+Display/instructions.i: Display/instructions.cpp.i
+.PHONY : Display/instructions.i
+
+# target to preprocess a source file
+Display/instructions.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Pacman.dir\build.make CMakeFiles/Pacman.dir/Display/instructions.cpp.i
+.PHONY : Display/instructions.cpp.i
+
+Display/instructions.s: Display/instructions.cpp.s
+.PHONY : Display/instructions.s
+
+# target to generate assembly for a file
+Display/instructions.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Pacman.dir\build.make CMakeFiles/Pacman.dir/Display/instructions.cpp.s
+.PHONY : Display/instructions.cpp.s
+
 Display/scoreBoard.obj: Display/scoreBoard.cpp.obj
 .PHONY : Display/scoreBoard.obj
 
@@ -321,29 +369,101 @@ Display/start_screen.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Pacman.dir\build.make CMakeFiles/Pacman.dir/Display/start_screen.cpp.s
 .PHONY : Display/start_screen.cpp.s
 
-Display/userManger.obj: Display/userManger.cpp.obj
-.PHONY : Display/userManger.obj
+Game/draw_game.obj: Game/draw_game.cpp.obj
+.PHONY : Game/draw_game.obj
 
 # target to build an object file
-Display/userManger.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Pacman.dir\build.make CMakeFiles/Pacman.dir/Display/userManger.cpp.obj
-.PHONY : Display/userManger.cpp.obj
+Game/draw_game.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Pacman.dir\build.make CMakeFiles/Pacman.dir/Game/draw_game.cpp.obj
+.PHONY : Game/draw_game.cpp.obj
 
-Display/userManger.i: Display/userManger.cpp.i
-.PHONY : Display/userManger.i
+Game/draw_game.i: Game/draw_game.cpp.i
+.PHONY : Game/draw_game.i
 
 # target to preprocess a source file
-Display/userManger.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Pacman.dir\build.make CMakeFiles/Pacman.dir/Display/userManger.cpp.i
-.PHONY : Display/userManger.cpp.i
+Game/draw_game.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Pacman.dir\build.make CMakeFiles/Pacman.dir/Game/draw_game.cpp.i
+.PHONY : Game/draw_game.cpp.i
 
-Display/userManger.s: Display/userManger.cpp.s
-.PHONY : Display/userManger.s
+Game/draw_game.s: Game/draw_game.cpp.s
+.PHONY : Game/draw_game.s
 
 # target to generate assembly for a file
-Display/userManger.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Pacman.dir\build.make CMakeFiles/Pacman.dir/Display/userManger.cpp.s
-.PHONY : Display/userManger.cpp.s
+Game/draw_game.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Pacman.dir\build.make CMakeFiles/Pacman.dir/Game/draw_game.cpp.s
+.PHONY : Game/draw_game.cpp.s
+
+Game/game.obj: Game/game.cpp.obj
+.PHONY : Game/game.obj
+
+# target to build an object file
+Game/game.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Pacman.dir\build.make CMakeFiles/Pacman.dir/Game/game.cpp.obj
+.PHONY : Game/game.cpp.obj
+
+Game/game.i: Game/game.cpp.i
+.PHONY : Game/game.i
+
+# target to preprocess a source file
+Game/game.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Pacman.dir\build.make CMakeFiles/Pacman.dir/Game/game.cpp.i
+.PHONY : Game/game.cpp.i
+
+Game/game.s: Game/game.cpp.s
+.PHONY : Game/game.s
+
+# target to generate assembly for a file
+Game/game.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Pacman.dir\build.make CMakeFiles/Pacman.dir/Game/game.cpp.s
+.PHONY : Game/game.cpp.s
+
+Game/game_init.obj: Game/game_init.cpp.obj
+.PHONY : Game/game_init.obj
+
+# target to build an object file
+Game/game_init.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Pacman.dir\build.make CMakeFiles/Pacman.dir/Game/game_init.cpp.obj
+.PHONY : Game/game_init.cpp.obj
+
+Game/game_init.i: Game/game_init.cpp.i
+.PHONY : Game/game_init.i
+
+# target to preprocess a source file
+Game/game_init.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Pacman.dir\build.make CMakeFiles/Pacman.dir/Game/game_init.cpp.i
+.PHONY : Game/game_init.cpp.i
+
+Game/game_init.s: Game/game_init.cpp.s
+.PHONY : Game/game_init.s
+
+# target to generate assembly for a file
+Game/game_init.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Pacman.dir\build.make CMakeFiles/Pacman.dir/Game/game_init.cpp.s
+.PHONY : Game/game_init.cpp.s
+
+Game/update_game.obj: Game/update_game.cpp.obj
+.PHONY : Game/update_game.obj
+
+# target to build an object file
+Game/update_game.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Pacman.dir\build.make CMakeFiles/Pacman.dir/Game/update_game.cpp.obj
+.PHONY : Game/update_game.cpp.obj
+
+Game/update_game.i: Game/update_game.cpp.i
+.PHONY : Game/update_game.i
+
+# target to preprocess a source file
+Game/update_game.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Pacman.dir\build.make CMakeFiles/Pacman.dir/Game/update_game.cpp.i
+.PHONY : Game/update_game.cpp.i
+
+Game/update_game.s: Game/update_game.cpp.s
+.PHONY : Game/update_game.s
+
+# target to generate assembly for a file
+Game/update_game.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Pacman.dir\build.make CMakeFiles/Pacman.dir/Game/update_game.cpp.s
+.PHONY : Game/update_game.cpp.s
 
 GameObjects/figures.obj: GameObjects/figures.cpp.obj
 .PHONY : GameObjects/figures.obj
@@ -369,6 +489,30 @@ GameObjects/figures.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Pacman.dir\build.make CMakeFiles/Pacman.dir/GameObjects/figures.cpp.s
 .PHONY : GameObjects/figures.cpp.s
 
+GameObjects/fruits.obj: GameObjects/fruits.cpp.obj
+.PHONY : GameObjects/fruits.obj
+
+# target to build an object file
+GameObjects/fruits.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Pacman.dir\build.make CMakeFiles/Pacman.dir/GameObjects/fruits.cpp.obj
+.PHONY : GameObjects/fruits.cpp.obj
+
+GameObjects/fruits.i: GameObjects/fruits.cpp.i
+.PHONY : GameObjects/fruits.i
+
+# target to preprocess a source file
+GameObjects/fruits.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Pacman.dir\build.make CMakeFiles/Pacman.dir/GameObjects/fruits.cpp.i
+.PHONY : GameObjects/fruits.cpp.i
+
+GameObjects/fruits.s: GameObjects/fruits.cpp.s
+.PHONY : GameObjects/fruits.s
+
+# target to generate assembly for a file
+GameObjects/fruits.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Pacman.dir\build.make CMakeFiles/Pacman.dir/GameObjects/fruits.cpp.s
+.PHONY : GameObjects/fruits.cpp.s
+
 GameObjects/ghost.obj: GameObjects/ghost.cpp.obj
 .PHONY : GameObjects/ghost.obj
 
@@ -392,30 +536,6 @@ GameObjects/ghost.s: GameObjects/ghost.cpp.s
 GameObjects/ghost.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Pacman.dir\build.make CMakeFiles/Pacman.dir/GameObjects/ghost.cpp.s
 .PHONY : GameObjects/ghost.cpp.s
-
-GameObjects/items.obj: GameObjects/items.cpp.obj
-.PHONY : GameObjects/items.obj
-
-# target to build an object file
-GameObjects/items.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Pacman.dir\build.make CMakeFiles/Pacman.dir/GameObjects/items.cpp.obj
-.PHONY : GameObjects/items.cpp.obj
-
-GameObjects/items.i: GameObjects/items.cpp.i
-.PHONY : GameObjects/items.i
-
-# target to preprocess a source file
-GameObjects/items.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Pacman.dir\build.make CMakeFiles/Pacman.dir/GameObjects/items.cpp.i
-.PHONY : GameObjects/items.cpp.i
-
-GameObjects/items.s: GameObjects/items.cpp.s
-.PHONY : GameObjects/items.s
-
-# target to generate assembly for a file
-GameObjects/items.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Pacman.dir\build.make CMakeFiles/Pacman.dir/GameObjects/items.cpp.s
-.PHONY : GameObjects/items.cpp.s
 
 GameObjects/lives.obj: GameObjects/lives.cpp.obj
 .PHONY : GameObjects/lives.obj
@@ -564,24 +684,39 @@ help:
 	@echo ... Controls/player_controller.obj
 	@echo ... Controls/player_controller.i
 	@echo ... Controls/player_controller.s
+	@echo ... Display/UserManager.obj
+	@echo ... Display/UserManager.i
+	@echo ... Display/UserManager.s
+	@echo ... Display/instructions.obj
+	@echo ... Display/instructions.i
+	@echo ... Display/instructions.s
 	@echo ... Display/scoreBoard.obj
 	@echo ... Display/scoreBoard.i
 	@echo ... Display/scoreBoard.s
 	@echo ... Display/start_screen.obj
 	@echo ... Display/start_screen.i
 	@echo ... Display/start_screen.s
-	@echo ... Display/userManger.obj
-	@echo ... Display/userManger.i
-	@echo ... Display/userManger.s
+	@echo ... Game/draw_game.obj
+	@echo ... Game/draw_game.i
+	@echo ... Game/draw_game.s
+	@echo ... Game/game.obj
+	@echo ... Game/game.i
+	@echo ... Game/game.s
+	@echo ... Game/game_init.obj
+	@echo ... Game/game_init.i
+	@echo ... Game/game_init.s
+	@echo ... Game/update_game.obj
+	@echo ... Game/update_game.i
+	@echo ... Game/update_game.s
 	@echo ... GameObjects/figures.obj
 	@echo ... GameObjects/figures.i
 	@echo ... GameObjects/figures.s
+	@echo ... GameObjects/fruits.obj
+	@echo ... GameObjects/fruits.i
+	@echo ... GameObjects/fruits.s
 	@echo ... GameObjects/ghost.obj
 	@echo ... GameObjects/ghost.i
 	@echo ... GameObjects/ghost.s
-	@echo ... GameObjects/items.obj
-	@echo ... GameObjects/items.i
-	@echo ... GameObjects/items.s
 	@echo ... GameObjects/lives.obj
 	@echo ... GameObjects/lives.i
 	@echo ... GameObjects/lives.s

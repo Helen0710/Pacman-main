@@ -1,7 +1,7 @@
 #pragma once
 #include "../utils.h"	
 #include "../Board/board.h"
-#include "../Board/config.h"
+#include "../config.h"
 #include "../Board/check_position.h"	
 
 class Controller{

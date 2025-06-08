@@ -3,9 +3,10 @@
 
 #include <vector>
 #include "../utils.h"    // enthält Position struct
-#include "config.h"  // enthält BOARD_WIDTH, BOARD_HEIGHT
+#include "../config.h"  // enthält BOARD_WIDTH, BOARD_HEIGHT
 #include "level.h"   // enthält LEVEL_HEIGHT, LEVEL_WIDTH und levelData
 #include "raylib.h"            // falls draw() Raylib nutzt
+#include <string>    // für std::string
 
 
 class Board {
@@ -25,5 +26,5 @@ public:
 
 private:
     //std::vector<std::vector<CellType>> grid;
-    char grid[LEVEL_HEIGHT][LEVEL_WIDTH + 1]; // +1 for null terminator 
+    std::vector<std::string> grid;  // Spielfeld als 2D-Array von Zeichen
 };

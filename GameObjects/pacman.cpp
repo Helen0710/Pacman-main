@@ -93,3 +93,11 @@ void PacMan::draw() const {
         YELLOW
     );
 }
+
+void PacMan::resetForNewGame(int x, int y) {
+    setPosition(x, y); // Reset to starting position
+    state = PacManState::Alive;
+    resetState();
+
+    currentDir = Direction::NONE; // Reset direction to default
+}
