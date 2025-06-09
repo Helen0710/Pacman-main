@@ -1,48 +1,197 @@
-<diagram program="umletino" version="15.1"><zoom_level>9</zoom_level><help_text></help_text><element><id>UMLClass</id><coordinates><x>153</x><y>270</y><w>189</w><h>171</h></coordinates><panel_attributes>Spielobjekt
+<diagram program="umletino" version="15.1"><zoom_level>5</zoom_level><help_text></help_text><element><id>UMLClass</id><coordinates><x>905</x><y>65</y><w>155</w><h>110</h></coordinates><panel_attributes>CheckPosition
 --
-- xpos: int 
-- ypos: int 
-- groesse: int 
-- farbe: string 
-- form: Form 
+grid: vector 
 --
-+ Spielobjekt(int xPos, int yPos)
-+ getXPos() : int 
-+ getYPos() : int 
-</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>0</x><y>486</y><w>189</w><h>171</h></coordinates><panel_attributes>Figuren
++ CheckPosition(board: Board)    
+ + isWalkable(x: int, y: int): bool          
+ + isWalkableForPacman(x: int, y: int): bool 
+ + isWalkableForGhost(x: int, y: int): bool  
+ + isWall(x: int, y: int): bool              
+ + isPortal(x: int, y: int): bool            
+ - wrapX(x: int): int const                  
+ - wrapY(y: int): int const 
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>890</x><y>230</y><w>180</w><h>105</h></coordinates><panel_attributes>Board
 --
-- farbe: Spielobjekt
-- form :Form
-- objekt : Spielobjekt 
+- grid vector 
 --
-+ Figuren ()</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>324</x><y>495</y><w>189</w><h>171</h></coordinates><panel_attributes>Items 
++Board ()
++ draw () {query}
++ getStartedPositions (Position:Pacman, Position:blinkyStart, 
+Position: pinkyStart, Positon:inkyStart, Position:clydStart)
++getCharAt(int:y, int:x) : char 
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>1170</x><y>185</y><w>160</w><h>65</h></coordinates><panel_attributes>Level
 --
--form: Spielobjekt  
--objekt: Spielobjekt 
-- wert: int  
---
-+ Items ()</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>153</x><y>0</y><w>189</w><h>171</h></coordinates><panel_attributes>Steuerung
---
-- 
---
-+ Steuerung ()
-+ bewegungPacman()
-+ Kollession()</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>270</x><y>432</y><w>81</w><h>81</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;10;70;70</additional_attributes></element><element><id>Relation</id><coordinates><x>171</x><y>432</y><w>36</w><h>72</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>20;10;10;60</additional_attributes></element><element><id>UMLClass</id><coordinates><x>315</x><y>738</y><w>189</w><h>171</h></coordinates><panel_attributes>Scoreboard 
---
-- name: string []
-- platzierung: int 
---
-+ Scoreboard()
-+ BerechnungSpielstand()
-+ Anzeige() 
-+ getScore()
 
-</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>396</x><y>657</y><w>27</w><h>99</h></coordinates><panel_attributes>lt=&lt;-</panel_attributes><additional_attributes>10;90;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>180</x><y>648</y><w>153</w><h>108</h></coordinates><panel_attributes>lt=&lt;-
-1
-</panel_attributes><additional_attributes>150;100;10;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>594</x><y>639</y><w>189</w><h>171</h></coordinates><panel_attributes>Spielfeld 
 --
--form: Spielobjekt  
--objekt: Spielobjekt 
-- wert: int  
++loadLevelFromFile (filename:char):bool
++getLevelHeight(): int
++getLevelWidth(): int 
++getLevelRow(row:int): int {const}
+
+
+
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>160</x><y>220</y><w>220</w><h>60</h></coordinates><panel_attributes>CheckCollision 
 --
-+ Items ()</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>234</x><y>162</y><w>27</w><h>126</h></coordinates><panel_attributes>lt=&lt;-</panel_attributes><additional_attributes>10;10;10;120</additional_attributes></element></diagram>
+
+--
++isPacmanCollidingWithGhost (pacman:Figure, ghost:Figure) :bool {static}
++isPacmanCollidingWithPoint (pacman:Figure, points:Figure) :bool {static}
++isPacmanCollidingWithFruit (pacman:Figure, fruit:Figure) :bool {static}</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>445</x><y>220</y><w>220</w><h>65</h></coordinates><panel_attributes>&lt;&lt;interface&gt;&gt;
+Controller 
+--
+
+--
++getNextDirection(gridX: int, gridY: int, checkPos: CheckPosition):  Direction    
++ ~Controller()</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>250</x><y>315</y><w>265</w><h>115</h></coordinates><panel_attributes>GhostController
+--
+# GhostMode mode
+#fload modeTimer
+#Directioon currentDir
+#Pacman:pacman
+#Figure:blinky
+--
+#chooseBestDirection (gx:int, gy:int, checkPos:CheckPosition, target:Position):Direction 
++GhostController(pac:PacMan, blinky:Figure)
++getNextDirection(gridX:int, gridY:int, checkPos:CheckPosition):Direction
++updateMode(deltaTime:float)
++getMode():GhostMode
++UpdateAllGhostModes(figures:vector, deltaTime:float)</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>555</x><y>320</y><w>230</w><h>65</h></coordinates><panel_attributes>PlayerController
+--
+-currentDir:Direction 
+-nextDir:Direction 
+--
++PlayerController()
++getNextDirection(gridX:int, gridY:int, checkPos:CheckPosition):Direction </panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>1120</x><y>405</y><w>145</w><h>65</h></coordinates><panel_attributes>Instruction
+--
+- screenWidth: int 
+screenHeight: int 
+--
++Instruction(screenWidth:int, screenHeight:int) 
++draw()
++update(backToMenu:bool)
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>1040</x><y>535</y><w>160</w><h>135</h></coordinates><panel_attributes>ScoreBoard
+--
+-menuItems:vector
+-screenWidth: int
+-screenHeight: int 
+- scores:map
+-currenUser: string
+- showInput: bool 
+-nameBuffer: char[]
+--
++ScoreBoard(width: int, height: int)
++LoadScores(filename: string) 
++SaveScores(filename:string) 
++AddUser(username:string)
++IncreaseScore(username:string, amount:int)
++GetScore(username:string): int
++ SetScores(newScores: vector&lt;pair&lt;string, int&gt;&gt;): void
++drawScore()</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>1225</x><y>555</y><w>130</w><h>105</h></coordinates><panel_attributes>StartScreen
+--
+-selectedIndex:int
+-screenWidth:int
+-screenHeigth:int
+-menuItems: string &lt;vektor&gt;
+--
++StartScreen(width:int, height:int)
++update()
++draw()
++getSelection():int
++isOptionSelected():bool
++DrawStartScreen(showPrompt:bool)
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>1380</x><y>385</y><w>135</w><h>100</h></coordinates><panel_attributes>UserManager
+--
+-currentUser:string
+-nameBuffer: char[]
+-nameEntered:bool
+--
++UserManager()
++inputName()
++getCurrentUser():string
++saveScore(score:int, filename:string)
++drawNameInput()
++isNameEntered():bool
++reset()
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>630</x><y>475</y><w>105</w><h>455</h></coordinates><panel_attributes>Game
+--
+-screenWidth: int
+-screenHeight:int
+-levelTransitionTimer:float
+-fruitPopupTimer:float
+-fruitPopupValue: int
+-fruitPopupX:int 
+-fruitPopupY:int
+-board: Board*
+-lives: Lives*
+-fruit: Fruit*
+-point:Points*
+-score: int 
+-dotsEaten: int
+-level: int
+-ghostSpeed: float
+-startScreen: StartScreen* 
+-scoreboard: Scoreboard*
+-userManager:UserManager*
+-pacmanStart:Positon 
+-blinkyStart:Position
+-pinkyStart:Position
+-inkyStart:Position 
+-clydeStart:Position 
+-pamanStartInitial:Position 
+-blinkyStartInitial:Position 
+-pinkyStartInitial:Position 
+-inkyStartInitial:Position 
+-clydeStartInitial:Position 
+-figures:vector
+-pacman: Pacman*
+-blinky: Ghost*
+-pinky:Ghost*
+-inky:Ghost*
+-clyde:Ghost*
+-main_music: Music
+-game_over:Music 
+--
+-drawGameScene()
+-drawlevelTransition()
+-drawGameOver()
+- drawPacman()
+-drawYouWon()
+-resetCharacterPosition()
+-resetGhostSpeeds()
+-UpdatePacmanAndHandleCollistions(deltaTime:float)
+-handleFruitLogic(deltaTime:float) 
+-checkAndHandleLevelUp():bool
+-handleGameOver()
+-loadLevelData()
+-setupWindows()
+-initGameOjects
+-initCharacters()
+-initMusic()
+-resetGameState()
+-handleGameWon()
++Game()
++~Game()
++init()
++run()</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>770</x><y>690</y><w>115</w><h>190</h></coordinates><panel_attributes>Config
+--
++CELL_SIZE: int
++TOP_MARGIN:int 
++BOTTOM_MARGIN:int 
++SCREEN_WIDTH:int
++SCREEN_HEIGHT:int
++GHOST_SPEEDS:float
++NUM_SPEEDS:float
++PACMAN_SPEED:float
++LEVEL_TRANSISTION_TIME:float
++GHOST_SCATTER_TIME:float
++GHOST_CHASWTIME:float
++TUNNEL:char
++WALL:char
++PORTAL:char
++EMPTY:char
++PACMAN:char
++BLINKY:char
++PINKY:char
++INKY:char
++CLYDE:char
++COIN:char</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>590</x><y>280</y><w>15</w><h>50</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;10;10;80</additional_attributes></element><element><id>Relation</id><coordinates><x>480</x><y>280</y><w>15</w><h>45</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;10;10;70</additional_attributes></element><element><id>Relation</id><coordinates><x>1120</x><y>465</y><w>15</w><h>80</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;10;10;140</additional_attributes></element><element><id>Relation</id><coordinates><x>375</x><y>245</y><w>80</w><h>15</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>140;10;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>985</x><y>170</y><w>15</w><h>65</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;110;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>1065</x><y>250</y><w>150</w><h>40</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;60;280;60;280;10</additional_attributes></element><element><id>Relation</id><coordinates><x>1260</x><y>435</y><w>130</w><h>15</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;10;240;10</additional_attributes></element><element><id>Relation</id><coordinates><x>1245</x><y>465</y><w>15</w><h>95</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;10;10;170</additional_attributes></element></diagram>
