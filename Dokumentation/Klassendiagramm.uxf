@@ -1,0 +1,216 @@
+<diagram program="umletino" version="15.1"><zoom_level>5</zoom_level><help_text></help_text><element><id>UMLClass</id><coordinates><x>745</x><y>0</y><w>155</w><h>110</h></coordinates><panel_attributes>CheckPosition
+fg=red
+--
+grid: vector 
+--
++ CheckPosition(board: Board)    
+ + isWalkable(x: int, y: int): bool          
+ + isWalkableForPacman(x: int, y: int): bool 
+ + isWalkableForGhost(x: int, y: int): bool  
+ + isWall(x: int, y: int): bool              
+ + isPortal(x: int, y: int): bool            
+ - wrapX(x: int): int const                  
+ - wrapY(y: int): int const 
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>730</x><y>165</y><w>180</w><h>105</h></coordinates><panel_attributes>Board
+fg=red
+--
+- grid vector 
+--
++Board ()
++ draw () {query}
++ getStartedPositions (Position:Pacman, Position:blinkyStart, 
+Position: pinkyStart, Positon:inkyStart, Position:clydStart)
++getCharAt(int:y, int:x) : char 
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>1010</x><y>120</y><w>160</w><h>65</h></coordinates><panel_attributes>Level
+fg=red
+--
+
+--
++loadLevelFromFile (filename:char):bool
++getLevelHeight(): int
++getLevelWidth(): int 
++getLevelRow(row:int): int {const}
+
+
+
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>0</x><y>155</y><w>220</w><h>60</h></coordinates><panel_attributes>CheckCollision 
+--
+
+--
++isPacmanCollidingWithGhost (pacman:Figure, ghost:Figure) :bool {static}
++isPacmanCollidingWithPoint (pacman:Figure, points:Figure) :bool {static}
++isPacmanCollidingWithFruit (pacman:Figure, fruit:Figure) :bool {static}</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>285</x><y>155</y><w>220</w><h>65</h></coordinates><panel_attributes>&lt;&lt;interface&gt;&gt;
+Controller 
+fg=red
+--
+
+--
++getNextDirection(gridX: int, gridY: int, checkPos: CheckPosition):  Direction    
++ ~Controller()</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>90</x><y>250</y><w>265</w><h>115</h></coordinates><panel_attributes>GhostController
+fg=red
+--
+# GhostMode mode
+#fload modeTimer
+#Directioon currentDir
+#Pacman:pacman
+#Figure:blinky
+--
+#chooseBestDirection (gx:int, gy:int, checkPos:CheckPosition, target:Position):Direction 
++GhostController(pac:PacMan, blinky:Figure)
++getNextDirection(gridX:int, gridY:int, checkPos:CheckPosition):Direction
++updateMode(deltaTime:float)
++getMode():GhostMode
++UpdateAllGhostModes(figures:vector, deltaTime:float)</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>395</x><y>255</y><w>230</w><h>65</h></coordinates><panel_attributes>PlayerController
+fg=red
+--
+-currentDir:Direction 
+-nextDir:Direction 
+--
++PlayerController()
++getNextDirection(gridX:int, gridY:int, checkPos:CheckPosition):Direction 
+
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>960</x><y>340</y><w>145</w><h>65</h></coordinates><panel_attributes>Instruction
+fg=blue
+--
+- screenWidth: int 
+screenHeight: int 
+--
++Instruction(screenWidth:int, screenHeight:int) 
++draw()
++update(backToMenu:bool)
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>880</x><y>470</y><w>160</w><h>135</h></coordinates><panel_attributes>ScoreBoard
+fg=blue
+--
+-menuItems:vector
+-screenWidth: int
+-screenHeight: int 
+- scores:map
+-currenUser: string
+- showInput: bool 
+-nameBuffer: char[]
+--
++ScoreBoard(width: int, height: int)
++LoadScores(filename: string) 
++SaveScores(filename:string) 
++AddUser(username:string)
++IncreaseScore(username:string, amount:int)
++GetScore(username:string): int
++ SetScores(newScores: vector&lt;pair&lt;string, int&gt;&gt;): void
++drawScore()</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>1065</x><y>490</y><w>130</w><h>105</h></coordinates><panel_attributes>StartScreen
+fg=blue
+--
+-selectedIndex:int
+-screenWidth:int
+-screenHeigth:int
+-menuItems: string &lt;vektor&gt;
+--
++StartScreen(width:int, height:int)
++update()
++draw()
++getSelection():int
++isOptionSelected():bool
++DrawStartScreen(showPrompt:bool)
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>1220</x><y>320</y><w>135</w><h>100</h></coordinates><panel_attributes>UserManager
+fg=blue
+--
+-currentUser:string
+-nameBuffer: char[]
+-nameEntered:bool
+--
++UserManager()
++inputName()
++getCurrentUser():string
++saveScore(score:int, filename:string)
++drawNameInput()
++isNameEntered():bool
++reset()
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>470</x><y>410</y><w>105</w><h>455</h></coordinates><panel_attributes>Game
+--
+-screenWidth: int
+-screenHeight:int
+-levelTransitionTimer:float
+-fruitPopupTimer:float
+-fruitPopupValue: int
+-fruitPopupX:int 
+-fruitPopupY:int
+-board: Board*
+-lives: Lives*
+-fruit: Fruit*
+-point:Points*
+-score: int 
+-dotsEaten: int
+-level: int
+-ghostSpeed: float
+-startScreen: StartScreen* 
+-scoreboard: Scoreboard*
+-userManager:UserManager*
+-pacmanStart:Positon 
+-blinkyStart:Position
+-pinkyStart:Position
+-inkyStart:Position 
+-clydeStart:Position 
+-pamanStartInitial:Position 
+-blinkyStartInitial:Position 
+-pinkyStartInitial:Position 
+-inkyStartInitial:Position 
+-clydeStartInitial:Position 
+-figures:vector
+-pacman: Pacman*
+-blinky: Ghost*
+-pinky:Ghost*
+-inky:Ghost*
+-clyde:Ghost*
+-main_music: Music
+-game_over:Music 
+--
+-drawGameScene()
+-drawlevelTransition()
+-drawGameOver()
+- drawPacman()
+-drawYouWon()
+-resetCharacterPosition()
+-resetGhostSpeeds()
+-UpdatePacmanAndHandleCollistions(deltaTime:float)
+-handleFruitLogic(deltaTime:float) 
+-checkAndHandleLevelUp():bool
+-handleGameOver()
+-loadLevelData()
+-setupWindows()
+-initGameOjects
+-initCharacters()
+-initMusic()
+-resetGameState()
+-handleGameWon()
++Game()
++~Game()
++init()
++run()</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>610</x><y>625</y><w>115</w><h>190</h></coordinates><panel_attributes>Config
+--
++CELL_SIZE: int
++TOP_MARGIN:int 
++BOTTOM_MARGIN:int 
++SCREEN_WIDTH:int
++SCREEN_HEIGHT:int
++GHOST_SPEEDS:float
++NUM_SPEEDS:float
++PACMAN_SPEED:float
++LEVEL_TRANSISTION_TIME:float
++GHOST_SCATTER_TIME:float
++GHOST_CHASWTIME:float
++TUNNEL:char
++WALL:char
++PORTAL:char
++EMPTY:char
++PACMAN:char
++BLINKY:char
++PINKY:char
++INKY:char
++CLYDE:char
++COIN:char</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>430</x><y>215</y><w>15</w><h>50</h></coordinates><panel_attributes>lt=&lt;&lt;-
+fg=red</panel_attributes><additional_attributes>10;10;10;80</additional_attributes></element><element><id>Relation</id><coordinates><x>320</x><y>215</y><w>15</w><h>45</h></coordinates><panel_attributes>lt=&lt;&lt;-
+fg=red</panel_attributes><additional_attributes>10;10;10;70</additional_attributes></element><element><id>Relation</id><coordinates><x>960</x><y>400</y><w>15</w><h>80</h></coordinates><panel_attributes>lt=&lt;&lt;-
+fg=blue</panel_attributes><additional_attributes>10;10;10;140</additional_attributes></element><element><id>Relation</id><coordinates><x>215</x><y>180</y><w>80</w><h>15</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>140;10;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>825</x><y>105</y><w>15</w><h>65</h></coordinates><panel_attributes>lt=&lt;&lt;-
+fg=red</panel_attributes><additional_attributes>10;110;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>905</x><y>185</y><w>150</w><h>40</h></coordinates><panel_attributes>lt=&lt;&lt;-
+fg=red</panel_attributes><additional_attributes>10;60;280;60;280;10</additional_attributes></element><element><id>Relation</id><coordinates><x>1100</x><y>370</y><w>130</w><h>15</h></coordinates><panel_attributes>lt=&lt;&lt;-
+fg=blue</panel_attributes><additional_attributes>10;10;240;10</additional_attributes></element><element><id>Relation</id><coordinates><x>1085</x><y>400</y><w>15</w><h>95</h></coordinates><panel_attributes>lt=&lt;&lt;-
+fg=blue</panel_attributes><additional_attributes>10;10;10;170</additional_attributes></element></diagram>

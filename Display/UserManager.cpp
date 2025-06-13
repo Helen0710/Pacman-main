@@ -80,21 +80,4 @@ void UserManager::reset() {
     nameEntered = false;
 }
 
-std::vector<std::pair<std::string, int>> UserManager::loadScores(const std::string& filename) {
-    std::vector<std::pair<std::string, int>> scores;
-    std::ifstream file(filename);
-    std::string name;
-    int score;
 
-    while (file >> name >> score) {
-        scores.emplace_back(name, score);
-    }
-
-    // Optional: Sortiere nach Score absteigend
-    std::sort(scores.begin(), scores.end(), [](auto& a, auto& b) {
-        return a.second > b.second;
-    });
-
-
-    return scores;
-}

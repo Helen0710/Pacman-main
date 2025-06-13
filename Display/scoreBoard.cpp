@@ -82,26 +82,6 @@ void Scoreboard::drawScore() {
         ++rank;
     }
 
-    if (showInput) {
-        DrawText("Enter name:", 20, y + 10, 20, WHITE);
-        DrawText(nameBuffer, 200, y + 10, 20, WHITE);
-
-        if (IsKeyPressed(KEY_ENTER)) {
-            AddUser(nameBuffer);
-            showInput = false;
-        } else {
-            int key = GetCharPressed();
-            if (key > 0 && strlen(nameBuffer) < 31) {
-                int len = static_cast<int>(strlen(nameBuffer));
-                nameBuffer[len] = (char)key;
-                nameBuffer[len + 1] = '\0';
-            }
-            if (IsKeyPressed(KEY_BACKSPACE)) {
-                int len = static_cast<int>(strlen(nameBuffer));
-                if (len > 0) nameBuffer[len - 1] = '\0';
-            }
-        }
-    }
 }
 void Scoreboard::SetScores(const std::vector<std::pair<std::string, int>>& newScores) {
     scores.clear();

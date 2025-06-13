@@ -9,7 +9,7 @@ const int SCREEN_WIDTH = getLevelWidth() * CELL_SIZE;// Width of the window in p
 const int SCREEN_HEIGHT = getLevelHeight() * CELL_SIZE + TOP_MARGIN + BOTTOM_MARGIN; // Height of the window in pixels
 
 
-const float GHOST_SPEEDS[] = {2.0f, 2.0f, 4.0f, 8.0f}; // Speed of the ghosts in seconds per move must be a divisor of cell_size
+const float GHOST_SPEEDS[] = {2.0f, 4.0f, 8.0f}; // Speed of the ghosts in seconds per move must be a divisor of cell_size
 const float NUM_SPEEDS = sizeof(GHOST_SPEEDS) / sizeof(GHOST_SPEEDS[0]); // Number of different ghost speeds
 const float PACMAN_SPEED = 4.0f; // Speed of PacMan in seconds per move must be a divisor of cell_size
 

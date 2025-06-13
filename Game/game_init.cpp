@@ -40,7 +40,7 @@ void Game::initCharacters() {
     blinkyStartInitial = blinkyStart;
     pinkyStartInitial  = pinkyStart;
     inkyStartInitial   = inkyStart;
-    clydeStartInitial  = clydeStart;
+    clydeStartInitial  = clydeStart; 
 
     pacman = new PacMan(pacmanStart.x, pacmanStart.y, new PlayerController(), PACMAN_SPEED);
     blinky = new Ghost(blinkyStart.x, blinkyStart.y, new BlinkyController(pacman), RED, GHOST_SPEEDS[0]);
@@ -67,5 +67,5 @@ void Game::resetGameState() {
     score = 0;
     dotsEaten = 0;
     level = 1;
-    ghostSpeed = GHOST_SPEEDS[0];
+    ghostSpeed = GHOST_SPEEDS[2];
 }

@@ -114,7 +114,7 @@ void Game::handleGameOver() {
         fruit->setActive(false);
         dotsEaten = 0;
         level = 1;
-        ghostSpeed = GHOST_SPEEDS[0]; // Reset ghost speed
+        ghostSpeed = GHOST_SPEEDS[2]; // Reset ghost speed
     }
 
     resetCharacterPositions();

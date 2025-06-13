@@ -1,0 +1,12 @@
+# Gesamtüberblick über das Spiel Pacman
+
+Das Pacman-Projekt ist eine eigenständige, in C++ entwickelte Anwendung, die das klassische Arcade-Spiel Pacman nachbildet. Ziel des Projekts ist es, ein funktionales und übersichtliches Spiel mit moderner Benutzeroberfläche bereitzustellen. Das Spiel besteht aus mehreren zentralen Komponenten: einer grafischen Oberfläche für die Benutzerinteraktion (Startbildschirm, Menüführung, Highscore-Anzeige, Spielanleitung und Namenseingabe), einer Spiellogik zur Steuerung von Pacman, Geistern und Punkten sowie einer dauerhaften Speicherung der Spielergebnisse.
+
+Die Spielfigur Pacman wird durch ein Labyrinth gesteuert, sammelt Punkte und muss dabei Geistern ausweichen. Die Punktestände der Spieler werden benutzerbezogen gespeichert und können im Highscore-Board eingesehen werden. Die gesamte grafische Darstellung und Steuerung erfolgt mithilfe der Raylib-Bibliothek. Das Projekt legt Wert auf eine klare Trennung der einzelnen Funktionsbereiche (Anzeige, Steuerung, Spiellogik, Highscore-Verwaltung), um Wartbarkeit und Erweiterbarkeit zu gewährleisten.
+
+# Konzept und Aufbau
+Wir haben unser Spiel um die Klassen Display, GameObjects, Controls und Board aufgebaut. Jede Klasse hat ihre eigenen Aufgabenbereiche und mehrere Unterklassen die jeweils von der Oberklasse erben. Unsere eigentliche Anwendung ist komplett in den Ordner Game ausgelagert. Auch hier haben wir für eine bessere Übersicht auf Modularisierung gesetzt. Das bedeutet, dass wir für jeden Aufgabenbereich eine cpp Datei anglegt haben. Beispielhaft will ich hier draw_game und die game_init aufführen. Zusammengeführt werden alle in der game.cpp. Diese wiederum wird auch in der main aufgerufen. 
+Innerhalb der einzelen Klassen haben wir auf das Prinzip der Datenkapselung zurückgegriffen. Das bedeutet, dass wir einen Großteil unseren Variabeln auf privat gesetzt haben. Man kann diese von außen nur mit Gettern/Settern aufrufen. Das dient dem Schutz und verhindert, dass der Zustand eines Objekts unktontrolliert oder fehlerhaft veränder wird. Außerdem macht Kapselung den Code übersichtlicher und erleichtert Wartung und Erweiterung.
+
+# Ausblick in die Zukunft. 
+In der Zukunft würden wir gerne noch den Coin einfügen, welcher es Pacman ermöglicht die Geister zu fressen. Außerdem könnte man noch ein Menü für die Steuerung von Lautstärke, Steuerung und den Schwierigkeitsgrad, sowie Anzeigeoptionen einführen. 
