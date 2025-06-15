@@ -56,5 +56,10 @@
         "xutility": "cpp",
         "functional": "cpp",
         "sstream": "cpp"
-    }
+    },
+    "markdown-pdf.styles": [
+        "C:\\Users\\helen\\Documents\\Pacman-main\\Dokumentation\\custom.css"
+    ],
+    "markdown-pdf.stylesRelativePathFile": true,
+    "markdown-pdf.highlightStyle": ""
 }

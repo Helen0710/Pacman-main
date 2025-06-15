@@ -10,3 +10,9 @@ Innerhalb der einzelen Klassen haben wir auf das Prinzip der Datenkapselung zur�
 
 # Ausblick in die Zukunft. 
 In der Zukunft würden wir gerne noch den Coin einfügen, welcher es Pacman ermöglicht die Geister zu fressen. Außerdem könnte man noch ein Menü für die Steuerung von Lautstärke, Steuerung und den Schwierigkeitsgrad, sowie Anzeigeoptionen einführen. 
+
+# Anmerkung Klassendiagramm
+__Farben:__ <br>
+Rot -> Thea <br>
+Blau -> Helen <br>
+Weiß -> Gemeinsam 
